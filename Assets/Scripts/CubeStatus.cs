@@ -26,8 +26,13 @@ public class CubeStatus : MonoBehaviour
     {
         foreach(GameObject face in cubeSide)
         {
-            face.transform.parent.transform.parent = cubeSide[4].transform.parent;
+            if(face != cubeSide[4])
+            {
+                face.transform.parent.transform.parent = cubeSide[4].transform.parent;
+            }
         }
+
+        cubeSide[4].transform.parent.GetComponent<PiviotRotation>().Rotate(cubeSide);
     }
     
 }

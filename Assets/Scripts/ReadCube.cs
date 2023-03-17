@@ -28,35 +28,14 @@ public class ReadCube : MonoBehaviour
         SetRayTransform();
 
         cubeStatus = GameObject.FindObjectOfType<CubeStatus>();
-        cubemap = FindObjectOfType<CubeMap>();
-
-        // List<GameObject> facesHit = new List<GameObject>();
-        // Vector3 ray = transformLeft.transform.position;
-        // RaycastHit hit;
-
-        // if(Physics.Raycast(ray, transformLeft.forward, out hit, Mathf.Infinity, layerMask))
-        // {
-        //     Debug.DrawRay(ray, transformLeft.forward * hit.distance, Color.yellow);
-        //     facesHit.Add(hit.collider.gameObject);
-        //     print(hit.collider.gameObject.name);
-            
-        // }
-        // else
-        // {
-        //     Debug.DrawRay(ray, transformLeft.forward * 1000, Color.green);
-        // }
-
-        // cubeStatus.left = facesHit;
-        // cubemap.SetColor();
-
-        
+        cubemap = FindObjectOfType<CubeMap>(); 
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        ReadState();
+        //ReadState();
         
     }
 
