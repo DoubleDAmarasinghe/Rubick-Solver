@@ -16,9 +16,8 @@ public class PiviotRotation : MonoBehaviour
 
     private float sesivity = 0.4f;
     private Vector3 rotation;
+    GameObject ttttt;
 
-    private Quaternion targetRotation;
-    
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +33,7 @@ public class PiviotRotation : MonoBehaviour
         if(dragging)
         {
             SpinSide(activeSide);
+            
             // if(Input.GetMouseButtonUp(0))
             // {
             //     dragging = false;
@@ -49,8 +49,7 @@ public class PiviotRotation : MonoBehaviour
         //Vector3 mouseoffset = (Input.mousePosition - mouseRef);
         if(side == cubeStatus.front && layerRotateButtonManager.positiveDirection == true)
         {
-            //rotation.x = 90;
-            
+            //rotation.x = (90) * sesivity * -1;
             transform.Rotate(90, 0, 0, Space.World);
             dragging = false;
         }
@@ -112,14 +111,14 @@ public class PiviotRotation : MonoBehaviour
             dragging = false;
         }
 
-        //transform.Rotate(rotation, Space.Self);
-        //mouseRef = Input.mousePosition;
+        transform.Rotate(rotation, Space.Self);
+        mouseRef = Input.mousePosition;
     }
 
     public void Rotate(List<GameObject> side)
     {
         activeSide = side;
-        //mouseRef = Input.mousePosition;
+        mouseRef = Input.mousePosition;
         dragging = true;
         localForward = Vector3.zero - side[4].transform.parent.transform.localPosition;
     }

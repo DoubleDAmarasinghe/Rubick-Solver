@@ -17,6 +17,7 @@ public class SelectFace : MonoBehaviour
     public GameObject upFaceDitector;
     public GameObject downFaceDitector;
 
+    GameObject face;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,7 @@ public class SelectFace : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         
         // if (Input.GetMouseButtonDown(0))
         // {
@@ -73,7 +75,7 @@ public class SelectFace : MonoBehaviour
 
     public void IdentifyFront()
     {
-         //readCube.ReadState();
+         readCube.ReadState();
             
             // raycast from the mouse towards the cube to see if a face is hit  
             RaycastHit hit;
@@ -83,7 +85,7 @@ public class SelectFace : MonoBehaviour
            
             if (Physics.Raycast(rayFromFront, out hit, 100.0f, layerMask))
             {   
-                 GameObject face = hit.collider.gameObject;
+                 face = hit.collider.gameObject;
                 // Make a list of all the sides (lists of face GameObjects)
                 List<List<GameObject>> cubeSides = new List<List<GameObject>>()
                 {
@@ -120,7 +122,7 @@ public class SelectFace : MonoBehaviour
            
             if (Physics.Raycast(rayFromBack, out hit, 100.0f, layerMask))
             {   
-                GameObject face = hit.collider.gameObject;
+                face = hit.collider.gameObject;
                 // Make a list of all the sides (lists of face GameObjects)
                 List<List<GameObject>> cubeSides = new List<List<GameObject>>()
                 {
@@ -157,7 +159,7 @@ public class SelectFace : MonoBehaviour
            
             if (Physics.Raycast(rayFromUp, out hit, 100.0f, layerMask))
             {   
-                GameObject face = hit.collider.gameObject;
+                face = hit.collider.gameObject;
                 // Make a list of all the sides (lists of face GameObjects)
                 List<List<GameObject>> cubeSides = new List<List<GameObject>>()
                 {
@@ -194,7 +196,7 @@ public class SelectFace : MonoBehaviour
            
             if (Physics.Raycast(rayFromDown, out hit, 100.0f, layerMask))
             {   
-                GameObject face = hit.collider.gameObject;
+                face = hit.collider.gameObject;
                 // Make a list of all the sides (lists of face GameObjects)
                 List<List<GameObject>> cubeSides = new List<List<GameObject>>()
                 {
