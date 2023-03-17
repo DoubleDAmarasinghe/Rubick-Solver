@@ -16,8 +16,9 @@ public class PiviotRotation : MonoBehaviour
 
     private float sesivity = 0.4f;
     private Vector3 rotation;
-    GameObject ttttt;
 
+    private Quaternion targetQuaternion;
+    private bool autoRotating = false;
 
     // Start is called before the first frame update
     void Start()
@@ -33,12 +34,16 @@ public class PiviotRotation : MonoBehaviour
         if(dragging)
         {
             SpinSide(activeSide);
-            
+            RotateToRightAngle();
             // if(Input.GetMouseButtonUp(0))
             // {
             //     dragging = false;
             // }
             
+        }
+        if(autoRotating)
+        {
+            AutoRotate();
         }
         
     }
@@ -49,9 +54,9 @@ public class PiviotRotation : MonoBehaviour
         //Vector3 mouseoffset = (Input.mousePosition - mouseRef);
         if(side == cubeStatus.front && layerRotateButtonManager.positiveDirection == true)
         {
-            //rotation.x = (90) * sesivity * -1;
-            transform.Rotate(90, 0, 0, Space.World);
-            dragging = false;
+            //rotation.x = 90;
+            transform.Rotate(50, 0, 0, Space.World);
+            //dragging = false;
         }
 
         if(side == cubeStatus.front && layerRotateButtonManager.positiveDirection == false)
@@ -121,5 +126,30 @@ public class PiviotRotation : MonoBehaviour
         mouseRef = Input.mousePosition;
         dragging = true;
         localForward = Vector3.zero - side[4].transform.parent.transform.localPosition;
+    }
+
+    public void RotateToRightAngle()
+    {
+        Vector3 vec = transform.localEulerAngles;
+        vec.x = Mathf.Round(vec.x/90) * 90;
+        vec.y = Mathf.Round(vec.y/90) * 90;
+        vec.z = Mathf.Round(vec.z/90) * 90;
+
+        targetQuaternion.eulerAngles = vec;
+        autoRotating = true;
+
+    }
+
+    private void AutoRotate()
+    {
+        dragging = false;
+        transform.localRotation = Quaternion.RotateTowards(transform.localRotation, targetQuaternion, 300*Time.deltaTime);
+
+        if(Quaternion.Angle(transform.localRotation, targetQuaternion) <= 1)
+        {
+            readCube.ReadState();
+            autoRotating = false;
+            //dragging = false;
+        }
     }
 }

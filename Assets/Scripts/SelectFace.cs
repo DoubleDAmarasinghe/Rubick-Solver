@@ -32,50 +32,12 @@ public class SelectFace : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
-        // if (Input.GetMouseButtonDown(0))
-        // {
-        //     // read the current state of the cube            
-        //     readCube.ReadState();
-            
-        //     // raycast from the mouse towards the cube to see if a face is hit  
-        //     RaycastHit hit;
-        //     //var arCamera = FindObjectOfType<ARSessionOrigin>().camera;
-        //     Ray ray = arCamera.ScreenPointToRay(Input.mousePosition);
-           
-        //     if (Physics.Raycast(ray, out hit, 100.0f, layerMask))
-        //     {   
-        //         GameObject face = hit.collider.gameObject;
-        //         // Make a list of all the sides (lists of face GameObjects)
-        //         List<List<GameObject>> cubeSides = new List<List<GameObject>>()
-        //         {
-        //             cubeStatus.up,
-        //             cubeStatus.down,
-        //             cubeStatus.left,
-        //             cubeStatus.right,
-        //             cubeStatus.front,
-        //             cubeStatus.back
-        //         };
-        //         // If the face hit exists within a side
-        //         foreach (List<GameObject> cubeSide in cubeSides)
-        //         {
-        //             if (cubeSide.Contains(face))
-        //             {
-        //                 //Pick it up
-        //                 cubeStatus.PickUp(cubeSide);
-        //                 //start the side rotation logic
-        //                 //cubeSide[4].transform.parent.GetComponent<PiviotRotation>().Rotate(cubeSide);
-        //             }
-        //         }
-        //     }
-
-        // }
+      
     }
 
     public void IdentifyFront()
     {
-         readCube.ReadState();
+        readCube.ReadState();
             
             // raycast from the mouse towards the cube to see if a face is hit  
             RaycastHit hit;
@@ -108,6 +70,8 @@ public class SelectFace : MonoBehaviour
                     }
                 }
             }
+
+            
     }
 
     public void IdentifyBack()

@@ -29,7 +29,7 @@ public class ReadCube : MonoBehaviour
 
         cubeStatus = GameObject.FindObjectOfType<CubeStatus>();
         cubemap = FindObjectOfType<CubeMap>(); 
-        //ReadState();
+        ReadState();
     }
 
     // Update is called once per frame

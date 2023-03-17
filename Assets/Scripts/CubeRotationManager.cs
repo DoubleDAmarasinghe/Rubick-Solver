@@ -10,10 +10,11 @@ public class CubeRotationManager : MonoBehaviour
     Vector2 currentSwipe;
     public GameObject cube;
     public float speed;
+    ReadCube readCube;
     // Start is called before the first frame update
     void Start()
     {
-        
+        readCube = GameObject.FindObjectOfType<ReadCube>();
     }
 
     // Update is called once per frame
@@ -22,6 +23,7 @@ public class CubeRotationManager : MonoBehaviour
         if(transform.rotation != cube.transform.rotation)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, cube.transform.rotation, speed * Time.deltaTime);
+            readCube.ReadState();
         }
 
         if(Input.GetMouseButtonDown(1))
