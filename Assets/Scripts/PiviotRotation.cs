@@ -36,6 +36,7 @@ public class PiviotRotation : MonoBehaviour
         if(dragging)
         {
             SpinSide(activeSide);
+            
             //RotateToRightAngle();
             // if(Input.GetMouseButtonUp(0))
             // {
