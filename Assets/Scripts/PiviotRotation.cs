@@ -11,6 +11,7 @@ public class PiviotRotation : MonoBehaviour
 
     private ReadCube readCube;
     private CubeStatus cubeStatus;
+    private Automate automate;
 
     private LayerRotateButtonManager layerRotateButtonManager;
 
@@ -25,6 +26,7 @@ public class PiviotRotation : MonoBehaviour
     {
         readCube = GameObject.FindObjectOfType<ReadCube>();
         cubeStatus = GameObject.FindObjectOfType<CubeStatus>();
+        automate = GameObject.FindObjectOfType<Automate>();
         layerRotateButtonManager = GameObject.FindObjectOfType<LayerRotateButtonManager>();
     }
 
@@ -34,7 +36,7 @@ public class PiviotRotation : MonoBehaviour
         if(dragging)
         {
             SpinSide(activeSide);
-            RotateToRightAngle();
+            //RotateToRightAngle();
             // if(Input.GetMouseButtonUp(0))
             // {
             //     dragging = false;
@@ -55,14 +57,17 @@ public class PiviotRotation : MonoBehaviour
         if(side == cubeStatus.front && layerRotateButtonManager.positiveDirection == true)
         {
             //rotation.x = 90;
-            transform.Rotate(50, 0, 0, Space.World);
+            //transform.Rotate(50, 0, 0, Space.World);
             //dragging = false;
+            automate.RotateSide(cubeStatus.front, -90);
+            dragging = false;
+    
         }
 
         if(side == cubeStatus.front && layerRotateButtonManager.positiveDirection == false)
         {
             //rotation.x = (90) * sesivity * -1;
-            transform.Rotate(-90, 0, 0, Space.World);
+            automate.RotateSide(cubeStatus.front, 90);
             dragging = false;
         }
 
@@ -72,15 +77,21 @@ public class PiviotRotation : MonoBehaviour
         if(side == cubeStatus.back && layerRotateButtonManager.positiveDirection == true)
         {
             //rotation.x = (90) * sesivity * -1;
-            transform.Rotate(90, 0, 0, Space.World);
+            // transform.Rotate(90, 0, 0, Space.World);
+            // dragging = false;
+            automate.RotateSide(cubeStatus.back, 90);
             dragging = false;
+            
         }
 
         if(side == cubeStatus.back && layerRotateButtonManager.positiveDirection == false)
         {
             //rotation.x = (90) * sesivity * -1;
-            transform.Rotate(-90, 0, 0, Space.World);
+            // transform.Rotate(-90, 0, 0, Space.World);
+            // dragging = false;
+            automate.RotateSide(cubeStatus.back, -90);
             dragging = false;
+            
         }
 
 
@@ -89,14 +100,14 @@ public class PiviotRotation : MonoBehaviour
         if(side == cubeStatus.up && layerRotateButtonManager.positiveDirection == true)
         {
             //rotation.x = (90) * sesivity * -1;
-            transform.Rotate(0, 90, 0, Space.World);
+            automate.RotateSide(cubeStatus.up, -90);
             dragging = false;
         }
 
         if(side == cubeStatus.up && layerRotateButtonManager.positiveDirection == false)
         {
             //rotation.x = (90) * sesivity * -1;
-            transform.Rotate(0, -90, 0, Space.World);
+            automate.RotateSide(cubeStatus.up, 90);
             dragging = false;
         }
 
@@ -105,14 +116,14 @@ public class PiviotRotation : MonoBehaviour
         if(side == cubeStatus.down && layerRotateButtonManager.positiveDirection == true)
         {
             //rotation.x = (90) * sesivity * -1;
-            transform.Rotate(0, 90, 0, Space.World);
+            automate.RotateSide(cubeStatus.down, 90);
             dragging = false;
         }
 
         if(side == cubeStatus.down && layerRotateButtonManager.positiveDirection == false)
         {
             //rotation.x = (90) * sesivity * -1;
-            transform.Rotate(0, -90, 0, Space.World);
+            automate.RotateSide(cubeStatus.down, -90);
             dragging = false;
         }
 
@@ -123,22 +134,35 @@ public class PiviotRotation : MonoBehaviour
     public void Rotate(List<GameObject> side)
     {
         activeSide = side;
-        mouseRef = Input.mousePosition;
+        //mouseRef = Input.mousePosition;
         dragging = true;
         localForward = Vector3.zero - side[4].transform.parent.transform.localPosition;
     }
 
-    public void RotateToRightAngle()
+    public void StartAutoRotate(List<GameObject> side, float angle)
     {
-        Vector3 vec = transform.localEulerAngles;
-        vec.x = Mathf.Round(vec.x/90) * 90;
-        vec.y = Mathf.Round(vec.y/90) * 90;
-        vec.z = Mathf.Round(vec.z/90) * 90;
+        cubeStatus.PickUp(side);
+        Vector3 localForward = Vector3.zero - side[4].transform.parent.transform.localPosition;
+        targetQuaternion = Quaternion.AngleAxis(angle, localForward) * transform.localRotation;
 
-        targetQuaternion.eulerAngles = vec;
+        
+
+        activeSide = side;
         autoRotating = true;
-
     }
+
+
+    // public void RotateToRightAngle()
+    // {
+    //     Vector3 vec = transform.localEulerAngles;
+    //     vec.x = Mathf.Round(vec.x/90) * 90;
+    //     vec.y = Mathf.Round(vec.y/90) * 90;
+    //     vec.z = Mathf.Round(vec.z/90) * 90;
+
+    //     targetQuaternion.eulerAngles = vec;
+    //     autoRotating = true;
+
+    // }
 
     private void AutoRotate()
     {
@@ -148,8 +172,9 @@ public class PiviotRotation : MonoBehaviour
         if(Quaternion.Angle(transform.localRotation, targetQuaternion) <= 1)
         {
             readCube.ReadState();
+            CubeStatus.autoRotating = false;
             autoRotating = false;
-            //dragging = false;
+            dragging = false;
         }
     }
 }

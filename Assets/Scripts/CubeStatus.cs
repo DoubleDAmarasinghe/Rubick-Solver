@@ -10,6 +10,9 @@ public class CubeStatus : MonoBehaviour
     public List<GameObject> right = new List<GameObject>();
     public List<GameObject> front = new List<GameObject>();
     public List<GameObject> back = new List<GameObject>();
+
+    public static bool autoRotating = false;
+    public static bool started = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +35,7 @@ public class CubeStatus : MonoBehaviour
             }
         }
 
-        cubeSide[4].transform.parent.GetComponent<PiviotRotation>().Rotate(cubeSide);
+        
     }
     
 }

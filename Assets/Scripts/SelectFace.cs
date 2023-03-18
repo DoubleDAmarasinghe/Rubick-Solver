@@ -67,6 +67,7 @@ public class SelectFace : MonoBehaviour
                         cubeStatus.PickUp(cubeSide);
                         //start the side rotation logic
                         //cubeSide[4].transform.parent.GetComponent<PiviotRotation>().Rotate(cubeSide);
+                        cubeSide[4].transform.parent.GetComponent<PiviotRotation>().Rotate(cubeSide);
                     }
                 }
             }
@@ -106,6 +107,7 @@ public class SelectFace : MonoBehaviour
                         cubeStatus.PickUp(cubeSide);
                         //start the side rotation logic
                         //cubeSide[4].transform.parent.GetComponent<PiviotRotation>().Rotate(cubeSide);
+                        cubeSide[4].transform.parent.GetComponent<PiviotRotation>().Rotate(cubeSide);
                     }
                 }
             }
@@ -143,6 +145,7 @@ public class SelectFace : MonoBehaviour
                         cubeStatus.PickUp(cubeSide);
                         //start the side rotation logic
                         //cubeSide[4].transform.parent.GetComponent<PiviotRotation>().Rotate(cubeSide);
+                        cubeSide[4].transform.parent.GetComponent<PiviotRotation>().Rotate(cubeSide);
                     }
                 }
             }
@@ -180,6 +183,7 @@ public class SelectFace : MonoBehaviour
                         cubeStatus.PickUp(cubeSide);
                         //start the side rotation logic
                         //cubeSide[4].transform.parent.GetComponent<PiviotRotation>().Rotate(cubeSide);
+                        cubeSide[4].transform.parent.GetComponent<PiviotRotation>().Rotate(cubeSide);
                     }
                 }
             }
