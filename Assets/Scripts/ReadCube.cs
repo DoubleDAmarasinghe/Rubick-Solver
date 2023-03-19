@@ -47,10 +47,10 @@ public class ReadCube : MonoBehaviour
 
         cubeStatus.up = ReadFace(upRays, transformUp);
         cubeStatus.down = ReadFace(downRays, transformDown);
-        cubeStatus.left = ReadFace(leftRays, transformLeft);
-        cubeStatus.right = ReadFace(rightRays, transformRight);
-        cubeStatus.front = ReadFace(frontRays, transformFront);
-        cubeStatus.back = ReadFace(backRays, transformBack);
+        cubeStatus.left = ReadFace(backRays, transformBack);
+        cubeStatus.right = ReadFace(frontRays, transformFront);
+        cubeStatus.front = ReadFace(leftRays, transformLeft);
+        cubeStatus.back = ReadFace(rightRays, transformRight);
         cubemap.SetColor();
     }
 
@@ -98,7 +98,7 @@ public class ReadCube : MonoBehaviour
             {
                 Debug.DrawRay(ray, rayTransform.forward * hit.distance, Color.yellow);
                 facesHit.Add(hit.collider.gameObject);
-                print(hit.collider.gameObject.name);
+                //print(hit.collider.gameObject.name);
                 
             }
 

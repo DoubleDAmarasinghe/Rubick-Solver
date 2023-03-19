@@ -32,6 +32,10 @@ public class SelectFace : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
+    
+       
       
     }
 
@@ -40,6 +44,7 @@ public class SelectFace : MonoBehaviour
         readCube.ReadState();
         if(!CubeStatus.autoRotating)
         {
+            Debug.Log("rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
             RaycastHit hit;
         //var arCamera = FindObjectOfType<ARSessionOrigin>().camera;
         //Ray ray = arCamera.ScreenPointToRay(Input.mousePosition);

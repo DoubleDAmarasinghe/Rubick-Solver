@@ -52,7 +52,7 @@ public class Automate : MonoBehaviour
         
     }
 
-    void DoMove(string move)
+    public void DoMove(string move)
     {
         readCube.ReadState();
         CubeStatus.autoRotating = true;

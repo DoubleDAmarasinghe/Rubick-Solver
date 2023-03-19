@@ -37,7 +37,7 @@ public class CubeMap : MonoBehaviour
 
     void UpdateMap(List<GameObject> face, Transform side)
     {
-        Debug.Log(face[1].name[0]);
+        //Debug.Log(face[1].name[0]);
         
         int i = 0;
         foreach (Transform map in side)
