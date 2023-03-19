@@ -55,46 +55,46 @@ public class PiviotRotation : MonoBehaviour
     {
         rotation = Vector3.zero;
         //Vector3 mouseoffset = (Input.mousePosition - mouseRef);
-        if(side == cubeStatus.right && layerRotateButtonManager.positiveDirection == true)
+        if(side == cubeStatus.front && layerRotateButtonManager.positiveDirection == true)
         {
             //rotation.x = 90;
             //transform.Rotate(50, 0, 0, Space.World);
             //dragging = false;
             //automate.RotateSide(cubeStatus.front, -90);
-            automate.DoMove("R");
+            automate.DoMove("F");
             dragging = false;
     
         }
 
-        if(side == cubeStatus.right && layerRotateButtonManager.positiveDirection == false)
+        if(side == cubeStatus.front && layerRotateButtonManager.positiveDirection == false)
         {
             //rotation.x = (90) * sesivity * -1;
             // automate.RotateSide(cubeStatus.front, 90);
-            automate.DoMove("R'");
+            automate.DoMove("F'");
             dragging = false;
         }
 
 
 
 
-        if(side == cubeStatus.left && layerRotateButtonManager.positiveDirection == true)
+        if(side == cubeStatus.back && layerRotateButtonManager.positiveDirection == true)
         {
             //rotation.x = (90) * sesivity * -1;
             // transform.Rotate(90, 0, 0, Space.World);
             // dragging = false;
             // automate.RotateSide(cubeStatus.back, 90);
-            automate.DoMove("L'");
+            automate.DoMove("B'");
             dragging = false;
             
         }
 
-        if(side == cubeStatus.left && layerRotateButtonManager.positiveDirection == false)
+        if(side == cubeStatus.back && layerRotateButtonManager.positiveDirection == false)
         {
             //rotation.x = (90) * sesivity * -1;
             // transform.Rotate(-90, 0, 0, Space.World);
             // dragging = false;
             // automate.RotateSide(cubeStatus.back, -90);
-            automate.DoMove("L");
+            automate.DoMove("B");
             dragging = false;
             
         }

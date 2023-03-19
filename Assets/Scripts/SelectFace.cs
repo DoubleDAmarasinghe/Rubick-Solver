@@ -44,7 +44,7 @@ public class SelectFace : MonoBehaviour
         readCube.ReadState();
         if(!CubeStatus.autoRotating)
         {
-            Debug.Log("rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
+            
             RaycastHit hit;
         //var arCamera = FindObjectOfType<ARSessionOrigin>().camera;
         //Ray ray = arCamera.ScreenPointToRay(Input.mousePosition);

@@ -47,10 +47,10 @@ public class ReadCube : MonoBehaviour
 
         cubeStatus.up = ReadFace(upRays, transformUp);
         cubeStatus.down = ReadFace(downRays, transformDown);
-        cubeStatus.left = ReadFace(backRays, transformBack);
-        cubeStatus.right = ReadFace(frontRays, transformFront);
-        cubeStatus.front = ReadFace(leftRays, transformLeft);
-        cubeStatus.back = ReadFace(rightRays, transformRight);
+        cubeStatus.left = ReadFace(leftRays, transformLeft);
+        cubeStatus.right = ReadFace(rightRays, transformRight);
+        cubeStatus.front = ReadFace(frontRays, transformFront);
+        cubeStatus.back = ReadFace(backRays, transformBack);
         cubemap.SetColor();
     }
 
@@ -58,10 +58,10 @@ public class ReadCube : MonoBehaviour
     {
         upRays = BuildRays(transformUp, new Vector3(90, 90, 0));
         downRays = BuildRays(transformDown, new Vector3(270, 90, 0));
-        rightRays = BuildRays(transformRight, new Vector3(0, 180, 0));
-        leftRays = BuildRays(transformLeft, new Vector3(0,0,0));
-        backRays = BuildRays(transformBack, new Vector3(0, 90, 0));
-        frontRays = BuildRays(transformFront, new Vector3(0, 270, 0));
+        leftRays = BuildRays(transformLeft, new Vector3(0, 180, 0));
+        rightRays = BuildRays(transformRight, new Vector3(0,0,0));
+        frontRays = BuildRays(transformFront, new Vector3(0, 90, 0));
+        backRays = BuildRays(transformBack, new Vector3(0, 270, 0));
     }
 
     List<GameObject> BuildRays(Transform rayTransform, Vector3 direction)
