@@ -3936,6 +3936,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cube: {fileID: 742572130}
   speed: 200
+  controllerArrowPanel: {fileID: 1380416273}
+  wholeRotateArrowPanel: {fileID: 1942651039}
 --- !u!114 &575701761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4001,6 +4003,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ce0f45ab72065840ae881135dd21997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shuffle: 0
+  arrowButtonSet: {fileID: 1380416273}
+  wholeArrowButtonSet: {fileID: 1942651039}
 --- !u!1 &592095346
 GameObject:
   m_ObjectHideFlags: 0

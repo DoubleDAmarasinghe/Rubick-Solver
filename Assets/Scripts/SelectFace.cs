@@ -38,16 +38,16 @@ public class SelectFace : MonoBehaviour
     public void IdentifyFront()
     {
         readCube.ReadState();
-            
-            // raycast from the mouse towards the cube to see if a face is hit  
+        if(!CubeStatus.autoRotating)
+        {
             RaycastHit hit;
-            //var arCamera = FindObjectOfType<ARSessionOrigin>().camera;
-            //Ray ray = arCamera.ScreenPointToRay(Input.mousePosition);
+        //var arCamera = FindObjectOfType<ARSessionOrigin>().camera;
+        //Ray ray = arCamera.ScreenPointToRay(Input.mousePosition);
             Ray rayFromFront = new Ray(frontFaceDitector.transform.position, frontFaceDitector.transform.forward);
-           
+        
             if (Physics.Raycast(rayFromFront, out hit, 100.0f, layerMask))
             {   
-                 face = hit.collider.gameObject;
+                    face = hit.collider.gameObject;
                 // Make a list of all the sides (lists of face GameObjects)
                 List<List<GameObject>> cubeSides = new List<List<GameObject>>()
                 {
@@ -72,19 +72,22 @@ public class SelectFace : MonoBehaviour
                 }
             }
 
+        }
+            // raycast from the mouse towards the cube to see if a face is hit  
+            
             
     }
 
     public void IdentifyBack()
     {
         readCube.ReadState();
-            
-            // raycast from the mouse towards the cube to see if a face is hit  
-            RaycastHit hit;
-            //var arCamera = FindObjectOfType<ARSessionOrigin>().camera;
-            //Ray ray = arCamera.ScreenPointToRay(Input.mousePosition);
-            Ray rayFromBack = new Ray(backFaceDitector.transform.position, backFaceDitector.transform.forward);
-           
+        if(!CubeStatus.autoRotating)
+        {
+        RaycastHit hit;
+    //var arCamera = FindObjectOfType<ARSessionOrigin>().camera;
+    //Ray ray = arCamera.ScreenPointToRay(Input.mousePosition);
+        Ray rayFromBack = new Ray(backFaceDitector.transform.position, backFaceDitector.transform.forward);
+
             if (Physics.Raycast(rayFromBack, out hit, 100.0f, layerMask))
             {   
                 face = hit.collider.gameObject;
@@ -111,13 +114,16 @@ public class SelectFace : MonoBehaviour
                     }
                 }
             }
+        }
+            // raycast from the mouse towards the cube to see if a face is hit  
+            
     }
 
     public void IdentifyUp()
     {
         readCube.ReadState();
-            
-            // raycast from the mouse towards the cube to see if a face is hit  
+        if(!CubeStatus.autoRotating)
+        {
             RaycastHit hit;
             //var arCamera = FindObjectOfType<ARSessionOrigin>().camera;
             //Ray ray = arCamera.ScreenPointToRay(Input.mousePosition);
@@ -149,13 +155,16 @@ public class SelectFace : MonoBehaviour
                     }
                 }
             }
+        }
+            // raycast from the mouse towards the cube to see if a face is hit  
+            
     }
 
     public void IdentifyDown()
     {
         readCube.ReadState();
-            
-            // raycast from the mouse towards the cube to see if a face is hit  
+        if(!CubeStatus.autoRotating)
+        {
             RaycastHit hit;
             //var arCamera = FindObjectOfType<ARSessionOrigin>().camera;
             //Ray ray = arCamera.ScreenPointToRay(Input.mousePosition);
@@ -187,6 +196,9 @@ public class SelectFace : MonoBehaviour
                     }
                 }
             }
+        }  
+            // raycast from the mouse towards the cube to see if a face is hit  
+            
     }
 
    
