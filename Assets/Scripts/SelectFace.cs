@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
-
+using UnityEngine.UI;
 
 public class SelectFace : MonoBehaviour
 {
@@ -16,7 +16,10 @@ public class SelectFace : MonoBehaviour
     public GameObject backFaceDitector;
     public GameObject upFaceDitector;
     public GameObject downFaceDitector;
-
+    [HideInInspector]
+    public bool frontSelected;
+    public Button btn;
+    
     GameObject face;
     // Start is called before the first frame update
     void Start()
@@ -27,6 +30,8 @@ public class SelectFace : MonoBehaviour
         //createing reference for AR Camera
         arCamera = FindObjectOfType<ARSessionOrigin>().camera;
         readCube.ReadState();
+
+        frontSelected = false;
     }
 
     // Update is called once per frame
@@ -44,15 +49,17 @@ public class SelectFace : MonoBehaviour
         readCube.ReadState();
         if(!CubeStatus.autoRotating)
         {
-            
+            frontSelected = true;
             RaycastHit hit;
         //var arCamera = FindObjectOfType<ARSessionOrigin>().camera;
         //Ray ray = arCamera.ScreenPointToRay(Input.mousePosition);
             Ray rayFromFront = new Ray(frontFaceDitector.transform.position, frontFaceDitector.transform.forward);
+           
         
             if (Physics.Raycast(rayFromFront, out hit, 100.0f, layerMask))
             {   
                     face = hit.collider.gameObject;
+                    Debug.Log(face.name + face);
                 // Make a list of all the sides (lists of face GameObjects)
                 List<List<GameObject>> cubeSides = new List<List<GameObject>>()
                 {
@@ -74,8 +81,10 @@ public class SelectFace : MonoBehaviour
                         //cubeSide[4].transform.parent.GetComponent<PiviotRotation>().Rotate(cubeSide);
                         cubeSide[4].transform.parent.GetComponent<PiviotRotation>().Rotate(cubeSide);
                     }
+                    
                 }
             }
+            
 
         }
             // raycast from the mouse towards the cube to see if a face is hit  

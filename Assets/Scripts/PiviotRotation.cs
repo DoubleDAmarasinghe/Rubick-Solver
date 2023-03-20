@@ -12,6 +12,7 @@ public class PiviotRotation : MonoBehaviour
     private ReadCube readCube;
     private CubeStatus cubeStatus;
     private Automate automate;
+    private SelectFace selectFace;
 
     private LayerRotateButtonManager layerRotateButtonManager;
 
@@ -28,6 +29,7 @@ public class PiviotRotation : MonoBehaviour
         cubeStatus = GameObject.FindObjectOfType<CubeStatus>();
         automate = GameObject.FindObjectOfType<Automate>();
         layerRotateButtonManager = GameObject.FindObjectOfType<LayerRotateButtonManager>();
+        selectFace = GameObject.FindObjectOfType<SelectFace>();
     }
 
     // Update is called once per frame
@@ -54,90 +56,442 @@ public class PiviotRotation : MonoBehaviour
     private void SpinSide(List<GameObject> side)
     {
         rotation = Vector3.zero;
-        //Vector3 mouseoffset = (Input.mousePosition - mouseRef);
-        if(side == cubeStatus.right && layerRotateButtonManager.positiveDirection == true)
+        
+    if(layerRotateButtonManager.rightUp)
+    {
+        if(side == cubeStatus.right)
         {
-            //rotation.x = 90;
-            //transform.Rotate(50, 0, 0, Space.World);
-            //dragging = false;
-            //automate.RotateSide(cubeStatus.front, -90);
             automate.DoMove("R");
             dragging = false;
-    
+            Debug.Log("1");
+            layerRotateButtonManager.rightUp = false;
         }
 
-        if(side == cubeStatus.right && layerRotateButtonManager.positiveDirection == false)
+        if(side == cubeStatus.left)
         {
-            //rotation.x = (90) * sesivity * -1;
-            // automate.RotateSide(cubeStatus.front, 90);
-            automate.DoMove("R'");
-            dragging = false;
-        }
-
-
-
-
-        if(side == cubeStatus.left && layerRotateButtonManager.positiveDirection == true)
-        {
-            //rotation.x = (90) * sesivity * -1;
-            // transform.Rotate(90, 0, 0, Space.World);
-            // dragging = false;
-            // automate.RotateSide(cubeStatus.back, 90);
-            automate.DoMove("L'");
-            dragging = false;
-            
-        }
-
-        if(side == cubeStatus.left && layerRotateButtonManager.positiveDirection == false)
-        {
-            //rotation.x = (90) * sesivity * -1;
-            // transform.Rotate(-90, 0, 0, Space.World);
-            // dragging = false;
-            // automate.RotateSide(cubeStatus.back, -90);
             automate.DoMove("L");
             dragging = false;
-            
+            Debug.Log("2");
+            layerRotateButtonManager.rightUp = false;
         }
 
-
-
-
-        if(side == cubeStatus.up && layerRotateButtonManager.positiveDirection == true)
+        if(side == cubeStatus.up)
         {
-            //rotation.x = (90) * sesivity * -1;
-            // automate.RotateSide(cubeStatus.up, -90);
             automate.DoMove("U");
             dragging = false;
+            Debug.Log("3");
+            layerRotateButtonManager.rightUp = false;
         }
 
-        if(side == cubeStatus.up && layerRotateButtonManager.positiveDirection == false)
+        if(side == cubeStatus.down)
         {
-            //rotation.x = (90) * sesivity * -1;
-            // automate.RotateSide(cubeStatus.up, 90);
-            automate.DoMove("U'");
-            dragging = false;
-        }
-
-
-
-        if(side == cubeStatus.down && layerRotateButtonManager.positiveDirection == true)
-        {
-            //rotation.x = (90) * sesivity * -1;
-            // automate.RotateSide(cubeStatus.down, 90);
-            automate.DoMove("D'");
-            dragging = false;
-        }
-
-        if(side == cubeStatus.down && layerRotateButtonManager.positiveDirection == false)
-        {
-            //rotation.x = (90) * sesivity * -1;
-            // automate.RotateSide(cubeStatus.down, -90);
             automate.DoMove("D");
             dragging = false;
+            Debug.Log("4");
+            layerRotateButtonManager.rightUp = false;
         }
 
-        transform.Rotate(rotation, Space.Self);
-        mouseRef = Input.mousePosition;
+        if(side == cubeStatus.front)
+        {
+            automate.DoMove("F");
+            dragging = false;
+            Debug.Log("5");
+            layerRotateButtonManager.rightUp = false;
+        }
+
+        if(side == cubeStatus.back)
+        {
+            automate.DoMove("B");
+            dragging = false;
+            Debug.Log("6");
+            layerRotateButtonManager.rightUp = false;
+        }
+
+        
+    }
+
+    if(layerRotateButtonManager.rightDown)
+    {
+        if(side == cubeStatus.right)
+        {
+            automate.DoMove("R'");
+            dragging = false;
+            Debug.Log("11");
+            layerRotateButtonManager.rightDown = false;
+        }
+
+        if(side == cubeStatus.left)
+        {
+            automate.DoMove("L'");
+            dragging = false;
+            Debug.Log("12");
+            layerRotateButtonManager.rightDown = false;
+        }
+
+        if(side == cubeStatus.up)
+        {
+            automate.DoMove("U'");
+            dragging = false;
+            Debug.Log("13");
+            layerRotateButtonManager.rightDown = false;
+        }
+
+        if(side == cubeStatus.down)
+        {
+            automate.DoMove("D'");
+            dragging = false;
+            Debug.Log("14");
+            layerRotateButtonManager.rightDown = false;
+        }
+
+        if(side == cubeStatus.front)
+        {
+            automate.DoMove("F'");
+            dragging = false;
+            Debug.Log("15");
+            layerRotateButtonManager.rightDown = false;
+        }
+
+        if(side == cubeStatus.back)
+        {
+            automate.DoMove("B'");
+            dragging = false;
+            Debug.Log("16");
+            layerRotateButtonManager.rightDown = false;
+        }
+
+        
+    }
+
+    if(layerRotateButtonManager.rightUpRight)
+    {
+        if(side == cubeStatus.right)
+        {
+            automate.DoMove("R'");
+            dragging = false;
+            Debug.Log("11");
+            layerRotateButtonManager.rightUpRight = false;
+        }
+
+        if(side == cubeStatus.left)
+        {
+            automate.DoMove("L'");
+            dragging = false;
+            Debug.Log("12");
+            layerRotateButtonManager.rightUpRight = false;
+        }
+
+        if(side == cubeStatus.up)
+        {
+            automate.DoMove("U'");
+            dragging = false;
+            Debug.Log("13");
+            layerRotateButtonManager.rightUpRight = false;
+        }
+
+        if(side == cubeStatus.down)
+        {
+            automate.DoMove("D'");
+            dragging = false;
+            Debug.Log("14");
+            layerRotateButtonManager.rightUpRight = false;
+        }
+
+        if(side == cubeStatus.front)
+        {
+            automate.DoMove("F'");
+            dragging = false;
+            Debug.Log("15");
+            layerRotateButtonManager.rightUpRight = false;
+        }
+
+        if(side == cubeStatus.back)
+        {
+            automate.DoMove("B'");
+            dragging = false;
+            Debug.Log("16");
+            layerRotateButtonManager.rightUpRight = false;
+        }
+
+        
+    }
+
+    if(layerRotateButtonManager.rightDownRight)
+    {
+        if(side == cubeStatus.right)
+        {
+            automate.DoMove("R");
+            dragging = false;
+            Debug.Log("11");
+            layerRotateButtonManager.rightDownRight = false;
+        }
+
+        if(side == cubeStatus.left)
+        {
+            automate.DoMove("L");
+            dragging = false;
+            Debug.Log("12");
+            layerRotateButtonManager.rightDownRight = false;
+        }
+
+        if(side == cubeStatus.up)
+        {
+            automate.DoMove("U");
+            dragging = false;
+            Debug.Log("13");
+            layerRotateButtonManager.rightDownRight = false;
+        }
+
+        if(side == cubeStatus.down)
+        {
+            automate.DoMove("D");
+            dragging = false;
+            Debug.Log("14");
+            layerRotateButtonManager.rightDownRight = false;
+        }
+
+        if(side == cubeStatus.front)
+        {
+            automate.DoMove("F");
+            dragging = false;
+            Debug.Log("15");
+            layerRotateButtonManager.rightDownRight = false;
+        }
+
+        if(side == cubeStatus.back)
+        {
+            automate.DoMove("B");
+            dragging = false;
+            Debug.Log("16");
+            layerRotateButtonManager.rightDownRight = false;
+        }
+
+        
+    }
+
+    if(layerRotateButtonManager.leftUp)
+    {
+        if(side == cubeStatus.right)
+        {
+            automate.DoMove("R'");
+            dragging = false;
+            Debug.Log("11");
+            layerRotateButtonManager.leftUp = false;
+        }
+
+        if(side == cubeStatus.left)
+        {
+            automate.DoMove("L'");
+            dragging = false;
+            Debug.Log("12");
+            layerRotateButtonManager.leftUp = false;
+        }
+
+        if(side == cubeStatus.up)
+        {
+            automate.DoMove("U'");
+            dragging = false;
+            Debug.Log("13");
+            layerRotateButtonManager.leftUp = false;
+        }
+
+        if(side == cubeStatus.down)
+        {
+            automate.DoMove("D'");
+            dragging = false;
+            Debug.Log("14");
+            layerRotateButtonManager.leftUp = false;
+        }
+
+        if(side == cubeStatus.front)
+        {
+            automate.DoMove("F'");
+            dragging = false;
+            Debug.Log("15");
+            layerRotateButtonManager.leftUp = false;
+        }
+
+        if(side == cubeStatus.back)
+        {
+            automate.DoMove("B'");
+            dragging = false;
+            Debug.Log("16");
+            layerRotateButtonManager.leftUp = false;
+        }
+
+
+        
+
+        
+    }
+
+    if(layerRotateButtonManager.leftDown)
+    {
+        if(side == cubeStatus.right)
+        {
+            automate.DoMove("R");
+            dragging = false;
+            Debug.Log("11");
+            layerRotateButtonManager.leftDown = false;
+        }
+
+        if(side == cubeStatus.left)
+        {
+            automate.DoMove("L");
+            dragging = false;
+            Debug.Log("12");
+            layerRotateButtonManager.leftDown = false;
+        }
+
+        if(side == cubeStatus.up)
+        {
+            automate.DoMove("U");
+            dragging = false;
+            Debug.Log("13");
+            layerRotateButtonManager.leftDown = false;
+        }
+
+        if(side == cubeStatus.down)
+        {
+            automate.DoMove("D");
+            dragging = false;
+            Debug.Log("14");
+            layerRotateButtonManager.leftDown = false;
+        }
+
+        if(side == cubeStatus.front)
+        {
+            automate.DoMove("F");
+            dragging = false;
+            Debug.Log("15");
+            layerRotateButtonManager.leftDown = false;
+        }
+
+        if(side == cubeStatus.back)
+        {
+            automate.DoMove("B");
+            dragging = false;
+            Debug.Log("16");
+            layerRotateButtonManager.leftDown = false;
+        }
+
+        
+    }
+
+
+    if(layerRotateButtonManager.leftUpLeft)
+    {
+        if(side == cubeStatus.right)
+        {
+            automate.DoMove("R");
+            dragging = false;
+            Debug.Log("11");
+            layerRotateButtonManager.leftUpLeft = false;
+        }
+
+        if(side == cubeStatus.left)
+        {
+            automate.DoMove("L");
+            dragging = false;
+            Debug.Log("12");
+            layerRotateButtonManager.leftUpLeft = false;
+        }
+
+        if(side == cubeStatus.up)
+        {
+            automate.DoMove("U");
+            dragging = false;
+            Debug.Log("13");
+            layerRotateButtonManager.leftUpLeft = false;
+        }
+
+        if(side == cubeStatus.down)
+        {
+            automate.DoMove("D");
+            dragging = false;
+            Debug.Log("14");
+            layerRotateButtonManager.leftUpLeft = false;
+        }
+
+        if(side == cubeStatus.front)
+        {
+            automate.DoMove("F");
+            dragging = false;
+            Debug.Log("15");
+            layerRotateButtonManager.leftUpLeft = false;
+        }
+
+        if(side == cubeStatus.back)
+        {
+            automate.DoMove("B");
+            dragging = false;
+            Debug.Log("16");
+            layerRotateButtonManager.leftUpLeft = false;
+        }
+
+        
+    }
+
+
+    if(layerRotateButtonManager.leftDownLeft)
+    {
+        if(side == cubeStatus.right)
+        {
+            automate.DoMove("R'");
+            dragging = false;
+            Debug.Log("11");
+            layerRotateButtonManager.leftDownLeft = false;
+        }
+
+        if(side == cubeStatus.left)
+        {
+            automate.DoMove("L'");
+            dragging = false;
+            Debug.Log("12");
+            layerRotateButtonManager.leftDownLeft = false;
+        }
+
+        if(side == cubeStatus.up)
+        {
+            automate.DoMove("U'");
+            dragging = false;
+            Debug.Log("13");
+            layerRotateButtonManager.leftDownLeft = false;
+        }
+
+        if(side == cubeStatus.down)
+        {
+            automate.DoMove("D'");
+            dragging = false;
+            Debug.Log("14");
+            layerRotateButtonManager.leftDownLeft = false;
+        }
+
+        if(side == cubeStatus.front)
+        {
+            automate.DoMove("F'");
+            dragging = false;
+            Debug.Log("15");
+            layerRotateButtonManager.leftDownLeft = false;
+        }
+
+        if(side == cubeStatus.back)
+        {
+            automate.DoMove("B'");
+            dragging = false;
+            Debug.Log("16");
+            layerRotateButtonManager.leftDownLeft = false;
+        }
+
+
+        
+
+        
+    }
+
+
+    
+        
     }
 
     public void Rotate(List<GameObject> side)

@@ -16,11 +16,14 @@ public class CubeRotationManager : MonoBehaviour
     public GameObject wholeRotateArrowPanel;
     ReadCube readCube;
     Automate automate;
+    SolveTwoPhase solveTwoPhase;
     // Start is called before the first frame update
     void Start()
     {
         readCube = GameObject.FindObjectOfType<ReadCube>();
         automate = GameObject.FindObjectOfType<Automate>();
+        solveTwoPhase = GameObject.FindObjectOfType<SolveTwoPhase>();
+        HideArrows(5.5f);
         // cube.transform.Rotate(0, 90, 0, Space.World);
     }
 
@@ -39,37 +42,30 @@ public class CubeRotationManager : MonoBehaviour
             //wholeCubeRotating = false;
         }
 
-        if(Input.GetMouseButtonDown(1))
-        {
-            Debug.Log("sdfsdfsdfsdfdsf");
-        }
+        // if(Input.GetMouseButtonDown(1))
+        // {
+        //     Debug.Log("sdfsdfsdfsdfdsf");
+        // }
        
-        if(wholeCubeRotating)
-        {
-            StartCoroutine(HideArrows());
-        }
         
-       
-        if(automate.shuffle)
-        {
-            //controllerArrowPanel.SetActive(true);
-            StartCoroutine(ShowArrows());
-            automate.shuffle = false;
-        }
     }
 
-    IEnumerator HideArrows()
+    public void HideArrows(float showTimeDelay)
     {
-        yield return new WaitForSeconds(0.3f);
-        controllerArrowPanel.SetActive(true);
-        wholeCubeRotating = false;
+        
+        controllerArrowPanel.SetActive(false);
+        wholeRotateArrowPanel.SetActive(false);
+
+        StartCoroutine(ShowArrows(showTimeDelay));
+        
     }
 
-    IEnumerator ShowArrows()
+    IEnumerator ShowArrows(float showTimeDelay)
     {
-        yield return new WaitForSeconds(8.2f);
+        yield return new WaitForSeconds(showTimeDelay);
         controllerArrowPanel.SetActive(true);
         wholeRotateArrowPanel.SetActive(true);
+        
         
     }
 
@@ -77,28 +73,28 @@ public class CubeRotationManager : MonoBehaviour
     {
         cube.transform.Rotate(0, 90, 0, Space.World);
         wholeCubeRotating = true;
-        controllerArrowPanel.SetActive(false);
+        
     }
 
     public void RotateRight()
     {
         cube.transform.Rotate(0, -90, 0, Space.World);
         wholeCubeRotating = true;
-        controllerArrowPanel.SetActive(false);
+       
     }
 
     public void RotateUp()
     {
         cube.transform.Rotate(0, 0, -90, Space.World);
         wholeCubeRotating = true;
-        controllerArrowPanel.SetActive(false);
+        
     }
 
     public void RotateBottom()
     {
         cube.transform.Rotate(0, 0, 90, Space.World);
         wholeCubeRotating = true;
-        controllerArrowPanel.SetActive(false);
+        
     }
 
     // void Drag()

@@ -4,7 +4,16 @@ using UnityEngine;
 
 public class LayerRotateButtonManager : MonoBehaviour
 {
-    public bool positiveDirection;
+    //start with capital is arrow direction
+    public bool rightUp;
+    public bool rightDown;
+    public bool rightUpRight;
+    public bool rightDownRight;
+
+    public bool leftUp;
+    public bool leftDown;
+    public bool leftUpLeft;
+    public bool leftDownLeft;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,13 +26,42 @@ public class LayerRotateButtonManager : MonoBehaviour
         
     }
 
-    public void SetPositivedirection()
+    public void SetRightUp()
     {
-        positiveDirection = true;
+        rightUp = true;
     }
 
-    public void SetNegativedirection()
+    public void SetRightDown()
     {
-        positiveDirection = false;
+        rightDown = true;
+    }
+
+    public void SetRightUpRight()
+    {
+        rightUpRight = true;
+    }
+
+    public void SetRightDownRight()
+    {
+        rightDownRight = true;
+    }
+
+
+
+    public void SetLeftUp()
+    {
+        leftUp = true;
+    }
+    public void SetLeftDown()
+    {
+        leftDown = true;
+    }
+    public void SetLeftUpLeft()
+    {
+        leftUpLeft = true;
+    }
+    public void SetLeftDownLeft()
+    {
+        leftDownLeft = true;
     }
 }

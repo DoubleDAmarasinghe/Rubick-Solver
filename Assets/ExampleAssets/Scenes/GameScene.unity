@@ -1230,6 +1230,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideArrows
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &143318152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3998,6 +4010,8 @@ MonoBehaviour:
   backFaceDitector: {fileID: 1837235616}
   upFaceDitector: {fileID: 882261855}
   downFaceDitector: {fileID: 2047050151}
+  frontSelected: 0
+  btn: {fileID: 0}
 --- !u!114 &575701764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4011,8 +4025,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shuffle: 0
-  arrowButtonSet: {fileID: 1380416273}
-  wholeArrowButtonSet: {fileID: 1942651039}
 --- !u!114 &575701765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4027,6 +4039,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   readCube: {fileID: 0}
   cubeStatus: {fileID: 0}
+  solvering: 0
 --- !u!1 &592095346
 GameObject:
   m_ObjectHideFlags: 0
@@ -6216,7 +6229,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecf93a7344d2814f9e5d7d10dc9352d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positiveDirection: 0
+  rightUp: 0
+  rightDown: 0
+  rightUpRight: 0
+  rightDownRight: 0
+  leftUp: 0
+  leftDown: 0
+  leftUpLeft: 0
+  leftDownLeft: 0
 --- !u!4 &870460189
 Transform:
   m_ObjectHideFlags: 0
@@ -6831,15 +6851,27 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 575701765}
-        m_TargetAssemblyTypeName: SolveTwoPhase, Assembly-CSharp
-        m_MethodName: Solver
+      - m_Target: {fileID: 575701764}
+        m_TargetAssemblyTypeName: Automate, Assembly-CSharp
+        m_MethodName: Shuffle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideArrows
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 8.3
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -8437,6 +8469,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideArrows
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.5
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -10808,6 +10852,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideArrows
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1434456548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10939,6 +10995,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideArrows
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.5
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -15996,9 +16064,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 575701764}
-        m_TargetAssemblyTypeName: Automate, Assembly-CSharp
-        m_MethodName: Shuffle
+      - m_Target: {fileID: 575701765}
+        m_TargetAssemblyTypeName: SolveTwoPhase, Assembly-CSharp
+        m_MethodName: Solver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17530,7 +17598,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 870460188}
         m_TargetAssemblyTypeName: LayerRotateButtonManager, Assembly-CSharp
-        m_MethodName: SetPositivedirection
+        m_MethodName: SetLeftUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17599,7 +17667,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 870460188}
         m_TargetAssemblyTypeName: LayerRotateButtonManager, Assembly-CSharp
-        m_MethodName: SetPositivedirection
+        m_MethodName: SetRightUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17647,7 +17715,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 870460188}
         m_TargetAssemblyTypeName: LayerRotateButtonManager, Assembly-CSharp
-        m_MethodName: SetNegativedirection
+        m_MethodName: SetRightDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17708,7 +17776,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 870460188}
         m_TargetAssemblyTypeName: LayerRotateButtonManager, Assembly-CSharp
-        m_MethodName: SetNegativedirection
+        m_MethodName: SetRightUpRight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17769,7 +17837,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 870460188}
         m_TargetAssemblyTypeName: LayerRotateButtonManager, Assembly-CSharp
-        m_MethodName: SetPositivedirection
+        m_MethodName: SetLeftUpLeft
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17830,7 +17898,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 870460188}
         m_TargetAssemblyTypeName: LayerRotateButtonManager, Assembly-CSharp
-        m_MethodName: SetPositivedirection
+        m_MethodName: SetLeftDownLeft
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17891,7 +17959,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 870460188}
         m_TargetAssemblyTypeName: LayerRotateButtonManager, Assembly-CSharp
-        m_MethodName: SetNegativedirection
+        m_MethodName: SetLeftDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17968,7 +18036,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 870460188}
         m_TargetAssemblyTypeName: LayerRotateButtonManager, Assembly-CSharp
-        m_MethodName: SetNegativedirection
+        m_MethodName: SetRightDownRight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

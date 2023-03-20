@@ -5,9 +5,12 @@ using Kociemba;
 
 public class SolveTwoPhase : MonoBehaviour
 {
+    
     public ReadCube readCube;
     public CubeStatus cubeStatus;
     private bool doOnce = true;
+    [HideInInspector]
+    public bool solvering = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +30,7 @@ public class SolveTwoPhase : MonoBehaviour
 
     public void Solver()
     {
-
+        
         readCube.ReadState();
 
         // get the state of the cube as a string

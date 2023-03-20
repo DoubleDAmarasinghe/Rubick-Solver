@@ -14,8 +14,7 @@ public class Automate : MonoBehaviour
     private ReadCube readCube;
     [HideInInspector]
     public bool shuffle = false;
-    public GameObject arrowButtonSet;
-    public GameObject wholeArrowButtonSet;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -37,8 +36,7 @@ public class Automate : MonoBehaviour
     public void Shuffle()
     {
         
-        arrowButtonSet.SetActive(false);
-        wholeArrowButtonSet.SetActive(false);
+        
         List<string> moves = new List<string>();
         // int ShuffleLength = Random.Range(10, 30);
         int ShuffleLength = 20;
