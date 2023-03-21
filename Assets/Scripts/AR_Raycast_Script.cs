@@ -64,11 +64,12 @@ public class AR_Raycast_Script : MonoBehaviour
             {
                 if(raycastManager.Raycast(ray, hittts, TrackableType.Planes))
             {
+                
                 Pose hitpos = hittts[0].pose;
                 spawnedCube =  Instantiate(objectToPlace, hitpos.position, hitpos.rotation);
                 topTextPanelAnim.SetTrigger("TopTextPanelUp");
                 bottomButtonPannelAnim.SetTrigger("PlayBottomButtonPanel");
-                qq.transform.position = spawnedCube.transform.position; 
+                qq.transform.position =  spawnedCube.transform.position; 
                 //qq.SetActive(false);
                 qq.transform.localScale = new Vector3(0.05f,0.05f,0.05f);
                 tapTittle.SetActive(false);
@@ -88,9 +89,9 @@ public class AR_Raycast_Script : MonoBehaviour
         
     }
 
-    public void PlaceCubeOnGround()
+    public void AddNew()
     {
-        spawnedCube.transform.Rotate(90, 0, 0, Space.World);
+        onlyonce = false;
         
     }
 }

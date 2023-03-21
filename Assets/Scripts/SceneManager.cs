@@ -8,7 +8,7 @@ public class SceneManager : MonoBehaviour
     //[System.Obsolete]
     public void LoadPlaceCubeLevel()
     {
-        Application.LoadLevel(1);
+        Application.LoadLevel(2);
     }
 
     public void LoadGameLevel()
