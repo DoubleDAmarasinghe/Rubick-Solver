@@ -9,6 +9,7 @@ public class StopWatchTimer : MonoBehaviour
     public float timeStart;
     public float waitTime;
     public TMP_Text timeText;
+    public bool startTimer = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,16 @@ public class StopWatchTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(TimeCounter());
+        if(startTimer)
+        {
+            StartCoroutine(TimeCounter());
+        }
+        
+    }
+
+    public void StartCounter()
+    {
+        startTimer = true;
     }
 
     IEnumerator TimeCounter()

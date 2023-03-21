@@ -14,12 +14,17 @@ public class Automate : MonoBehaviour
     private ReadCube readCube;
     [HideInInspector]
     public bool shuffle = false;
+
+    public AudioSource source;
+    
     
     // Start is called before the first frame update
     void Start()
     {
         cubeStatus = FindObjectOfType<CubeStatus>();
         readCube = FindObjectOfType<ReadCube>();
+        
+        StartCoroutine(firstShuffle());
     }
 
     // Update is called once per frame
@@ -31,6 +36,21 @@ public class Automate : MonoBehaviour
             moveList.Remove(moveList[0]);
             //Debug.Log("gggggggggggggggggggggggggggggggg");
         }
+    }
+
+    IEnumerator firstShuffle()
+    {
+        yield return new WaitForSeconds(1f);
+        List<string> moves = new List<string>();
+        // int ShuffleLength = Random.Range(10, 30);
+        int ShuffleLength = 11;
+        for(int i = 0; i < ShuffleLength; i++)
+        {
+            int randomMoves = Random.Range(0, allMoves.Count);
+            moves.Add(allMoves[randomMoves]);
+        }
+        moveList = moves;
+        shuffle = true;
     }
 
     public void Shuffle()
@@ -52,6 +72,8 @@ public class Automate : MonoBehaviour
 
     public void DoMove(string move)
     {
+        //source.Play();
+        //Debug.Log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
         readCube.ReadState();
         CubeStatus.autoRotating = true;
         if (move == "U")
