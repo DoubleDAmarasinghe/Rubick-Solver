@@ -26,6 +26,10 @@ public class AR_Raycast_Script : MonoBehaviour
 
 
 
+    public GameObject qq;
+
+
+
     public ARRaycastManager raycastManager;
     public GameObject objectToPlace;
     public Camera arcamera;
@@ -63,6 +67,8 @@ public class AR_Raycast_Script : MonoBehaviour
                 spawnedCube =  Instantiate(objectToPlace, hitpos.position, hitpos.rotation);
                 topTextPanelAnim.SetTrigger("TopTextPanelUp");
                 bottomButtonPannelAnim.SetTrigger("PlayBottomButtonPanel");
+                qq.transform.position = spawnedCube.transform.position; 
+                //qq.SetActive(false);
                 onlyonce = true;
             }
             }
