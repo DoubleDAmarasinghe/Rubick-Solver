@@ -7,24 +7,37 @@ using UnityEngine.XR.ARSubsystems;
 
 public class AR_Raycast_Script : MonoBehaviour
 {
+    
     public GameObject topTextPanel;
     public GameObject bottomButtonPanel;
-    private Button tapButton;
-    public GameObject cubeToSpawn;
-    GameObject spawnedCube;
-    bool objectSpawned;
-    ARRaycastManager arRaycastManager;
-    List<ARRaycastHit> hits = new List<ARRaycastHit>();
+    // private Button tapButton;
+    // public GameObject cubeToSpawn;
+    // public GameObject testt;
+    [HideInInspector]
+    public GameObject spawnedCube;
+    // public GameObject test;
+    // bool objectSpawned;
+    // ARRaycastManager arRaycastManager;
+    // List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     Animator topTextPanelAnim;
     Animator bottomButtonPannelAnim;
+    bool onlyonce;
+
+
+
+    public ARRaycastManager raycastManager;
+    public GameObject objectToPlace;
+    public Camera arcamera;
+    private List<ARRaycastHit> hittts = new List<ARRaycastHit>();
     // Start is called before the first frame update
     void Start()
     {
-        objectSpawned = false;
-        arRaycastManager = GetComponent<ARRaycastManager>();
+        onlyonce = false;
+        // objectSpawned = false;
+        // arRaycastManager = GetComponent<ARRaycastManager>();
 
-        tapButton = gameObject.GetComponent<Button>();
+        // tapButton = gameObject.GetComponent<Button>();
         topTextPanelAnim = topTextPanel.GetComponent<Animator>();
         bottomButtonPannelAnim = bottomButtonPanel.GetComponent<Animator>();
     }
@@ -33,34 +46,42 @@ public class AR_Raycast_Script : MonoBehaviour
     void Update()
     {
         
+       
+            
+                
+
+        Ray ray = arcamera.ScreenPointToRay(Input.mousePosition);
+        
+        
+        if(Input.GetMouseButton(0))
+        {
+            if(!onlyonce)
+            {
+                if(raycastManager.Raycast(ray, hittts, TrackableType.Planes))
+            {
+                Pose hitpos = hittts[0].pose;
+                spawnedCube =  Instantiate(objectToPlace, hitpos.position, hitpos.rotation);
+                topTextPanelAnim.SetTrigger("TopTextPanelUp");
+                bottomButtonPannelAnim.SetTrigger("PlayBottomButtonPanel");
+                onlyonce = true;
+            }
+            }
+            
+        }
+        
+            
+                
+        
+
+                
+
+        
+        
     }
 
     public void PlaceCubeOnGround()
     {
-        Debug.Log("Cube On Ground!");
-        //deactivate tap button
-        tapButton.gameObject.SetActive(false);
-        //play top and bottom panel animations
-        topTextPanelAnim.SetTrigger("TopTextPanelUp");
-        bottomButtonPannelAnim.SetTrigger("PlayBottomButtonPanel");
+        spawnedCube.transform.Rotate(90, 0, 0, Space.World);
         
-
-        //activate and place cuube
-        if(arRaycastManager.Raycast(Input.GetTouch(0).position, hits, TrackableType.PlaneWithinPolygon))
-        {
-            var hitPosition = hits[0].pose;
-            if(!objectSpawned)
-            {
-                spawnedCube = Instantiate(cubeToSpawn, hitPosition.position, hitPosition.rotation);
-                objectSpawned = true;
-            }
-            else
-            {
-                spawnedCube.transform.position = hitPosition.position;
-            }
-        }
-        
-        
-
     }
 }
