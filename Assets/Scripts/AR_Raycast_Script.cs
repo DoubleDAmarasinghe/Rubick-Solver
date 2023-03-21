@@ -23,6 +23,7 @@ public class AR_Raycast_Script : MonoBehaviour
 
     Animator topTextPanelAnim;
     Animator bottomButtonPannelAnim;
+    Automate automate;
     bool onlyonce;
 
 
@@ -45,6 +46,7 @@ public class AR_Raycast_Script : MonoBehaviour
         // tapButton = gameObject.GetComponent<Button>();
         topTextPanelAnim = topTextPanel.GetComponent<Animator>();
         bottomButtonPannelAnim = bottomButtonPanel.GetComponent<Animator>();
+        automate = GameObject.FindObjectOfType<Automate>();
     }
 
     // Update is called once per frame
@@ -60,16 +62,22 @@ public class AR_Raycast_Script : MonoBehaviour
         
         if(Input.GetMouseButton(0))
         {
+           
             if(!onlyonce)
             {
+                
+                StartCoroutine(automate.firstShuffle());
+                
                 if(raycastManager.Raycast(ray, hittts, TrackableType.Planes))
             {
                 
                 Pose hitpos = hittts[0].pose;
-                spawnedCube =  Instantiate(objectToPlace, hitpos.position, hitpos.rotation);
+                spawnedCube =  Instantiate(objectToPlace, new Vector3(hitpos.position.x,hitpos.position.y+0.1f,hitpos.position.z) , hitpos.rotation);
                 topTextPanelAnim.SetTrigger("TopTextPanelUp");
                 bottomButtonPannelAnim.SetTrigger("PlayBottomButtonPanel");
                 qq.transform.position =  spawnedCube.transform.position; 
+                tapTittle.SetActive(false);
+
                 //qq.SetActive(false);
                 qq.transform.localScale = new Vector3(0.05f,0.05f,0.05f);
                 tapTittle.SetActive(false);
@@ -92,6 +100,8 @@ public class AR_Raycast_Script : MonoBehaviour
     public void AddNew()
     {
         onlyonce = false;
-        
+        qq.SetActive(true);
     }
+
+   
 }

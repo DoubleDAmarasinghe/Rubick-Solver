@@ -24,7 +24,7 @@ public class Automate : MonoBehaviour
         cubeStatus = FindObjectOfType<CubeStatus>();
         readCube = FindObjectOfType<ReadCube>();
         
-        StartCoroutine(firstShuffle());
+        
     }
 
     // Update is called once per frame
@@ -38,7 +38,7 @@ public class Automate : MonoBehaviour
         }
     }
 
-    IEnumerator firstShuffle()
+    public IEnumerator firstShuffle()
     {
         yield return new WaitForSeconds(1f);
         List<string> moves = new List<string>();
