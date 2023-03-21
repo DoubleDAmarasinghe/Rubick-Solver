@@ -15,6 +15,7 @@ public class AR_Raycast_Script : MonoBehaviour
     // public GameObject testt;
     [HideInInspector]
     public GameObject spawnedCube;
+    public GameObject tapTittle;
     // public GameObject test;
     // bool objectSpawned;
     // ARRaycastManager arRaycastManager;
@@ -69,6 +70,8 @@ public class AR_Raycast_Script : MonoBehaviour
                 bottomButtonPannelAnim.SetTrigger("PlayBottomButtonPanel");
                 qq.transform.position = spawnedCube.transform.position; 
                 //qq.SetActive(false);
+                qq.transform.localScale = new Vector3(0.05f,0.05f,0.05f);
+                tapTittle.SetActive(false);
                 onlyonce = true;
             }
             }
