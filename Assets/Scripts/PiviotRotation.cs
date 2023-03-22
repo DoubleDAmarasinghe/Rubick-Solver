@@ -13,6 +13,7 @@ public class PiviotRotation : MonoBehaviour
     private CubeStatus cubeStatus;
     private Automate automate;
     private SelectFace selectFace;
+    private CameraRaycast cameraRaycast;
 
     private LayerRotateButtonManager layerRotateButtonManager;
 
@@ -30,6 +31,7 @@ public class PiviotRotation : MonoBehaviour
         automate = GameObject.FindObjectOfType<Automate>();
         layerRotateButtonManager = GameObject.FindObjectOfType<LayerRotateButtonManager>();
         selectFace = GameObject.FindObjectOfType<SelectFace>();
+        cameraRaycast = GameObject.FindObjectOfType<CameraRaycast>();
     }
 
     // Update is called once per frame
@@ -59,13 +61,33 @@ public class PiviotRotation : MonoBehaviour
         
     if(layerRotateButtonManager.rightUp)
     {
-        if(side == cubeStatus.right)
-        {
-            automate.DoMove("R");
-            dragging = false;
-            Debug.Log("1");
-            layerRotateButtonManager.rightUp = false;
-        }
+        // if(side == cubeStatus.right)
+        // {
+            if(cameraRaycast.orangeSide || cameraRaycast.greenSide || cameraRaycast.whiteSide || cameraRaycast.yellowSide)
+            {
+                automate.DoMove("R");
+                dragging = false;
+                Debug.Log("1");
+                layerRotateButtonManager.rightUp = false;
+            }
+
+            if(cameraRaycast.redSide)
+            {
+                automate.DoMove("B");
+                dragging = false;
+                Debug.Log("1");
+                layerRotateButtonManager.rightUp = false;
+            }
+
+            if(cameraRaycast.blueSide)
+            {
+                automate.DoMove("F'");
+                dragging = false;
+                Debug.Log("1");
+                layerRotateButtonManager.rightUp = false;
+            }
+            
+        // }
 
         if(side == cubeStatus.left)
         {
@@ -488,6 +510,9 @@ public class PiviotRotation : MonoBehaviour
 
         
     }
+
+
+    
 
 
     

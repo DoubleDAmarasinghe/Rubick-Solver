@@ -19,12 +19,12 @@ public class CameraRaycast : MonoBehaviour
     public GameObject yellowSideMesh;
     public GameObject whiteSideMesh;
     public GameObject orangeSideMesh;
-    bool redSide = false;
-    bool blueSide = false;
-    bool greenSide = false;
-    bool yellowSide = false;
-    bool whiteSide = false;
-    bool orangeSide = false;
+    public bool redSide = false;
+    public bool blueSide = false;
+    public bool greenSide = false;
+    public bool yellowSide = false;
+    public bool whiteSide = false;
+    public bool orangeSide = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +43,7 @@ public class CameraRaycast : MonoBehaviour
         
         
         
-        if(Physics.Raycast(rayFromFront, out hit, 10000f, layerMask_red) && !redSide)
+        if(Physics.Raycast(rayFromFront, out hit, 0.05f, layerMask_red) && !redSide)
         {
             
             controllerArrows.transform.rotation = redSideMesh.transform.rotation;
@@ -56,7 +56,7 @@ public class CameraRaycast : MonoBehaviour
             yellowSide = false;
         }
 
-        if(Physics.Raycast(rayFromFront, out hit, 10000f, layerMask_blue) && !blueSide)
+        if(Physics.Raycast(rayFromFront, out hit, 0.05f, layerMask_blue) && !blueSide)
         {
             
             controllerArrows.transform.rotation = blueSideMesh.transform.rotation;
@@ -69,7 +69,7 @@ public class CameraRaycast : MonoBehaviour
             yellowSide = false;
         }
 
-        if(Physics.Raycast(rayFromFront, out hit, 10000f, layerMask_green) && !greenSide)
+        if(Physics.Raycast(rayFromFront, out hit, 0.05f, layerMask_green) && !greenSide)
         {
             
             controllerArrows.transform.rotation = greenSideMesh.transform.rotation;
@@ -82,7 +82,7 @@ public class CameraRaycast : MonoBehaviour
             yellowSide = false;
         }
 
-        if(Physics.Raycast(rayFromFront, out hit, 10000f, layerMask_yellow) && !yellowSide)
+        if(Physics.Raycast(rayFromFront, out hit, 0.05f, layerMask_yellow) && !yellowSide)
         {
             
             controllerArrows.transform.rotation = yellowSideMesh.transform.rotation;
@@ -95,7 +95,7 @@ public class CameraRaycast : MonoBehaviour
             orangeSide = false;
         }
 
-        if(Physics.Raycast(rayFromFront, out hit, 10000f, layerMask_white) && !whiteSide)
+        if(Physics.Raycast(rayFromFront, out hit, 0.05f, layerMask_white) && !whiteSide)
         {
             
             controllerArrows.transform.rotation = whiteSideMesh.transform.rotation;
@@ -108,7 +108,7 @@ public class CameraRaycast : MonoBehaviour
             orangeSide = false;
         }
 
-        if(Physics.Raycast(rayFromFront, out hit, 10000f, layerMask_orange) && !orangeSide)
+        if(Physics.Raycast(rayFromFront, out hit, 0.05f, layerMask_orange) && !orangeSide)
         {
             
             controllerArrows.transform.rotation = orangeSideMesh.transform.rotation;

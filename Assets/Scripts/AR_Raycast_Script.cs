@@ -66,11 +66,11 @@ public class AR_Raycast_Script : MonoBehaviour
             if(!onlyonce)
             {
                 
-                StartCoroutine(automate.firstShuffle());
+                // StartCoroutine(automate.firstShuffle());
                 
                 if(raycastManager.Raycast(ray, hittts, TrackableType.Planes))
             {
-                
+                StartCoroutine(automate.firstShuffle());
                 Pose hitpos = hittts[0].pose;
                 spawnedCube =  Instantiate(objectToPlace, new Vector3(hitpos.position.x,hitpos.position.y+0.1f,hitpos.position.z) , hitpos.rotation);
                 topTextPanelAnim.SetTrigger("TopTextPanelUp");
