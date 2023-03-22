@@ -38,6 +38,7 @@ public class AR_Raycast_Script : MonoBehaviour
     public GameObject objectToPlace;
     public Camera arcamera;
     private List<ARRaycastHit> hittts = new List<ARRaycastHit>();
+    private CubeRotationManager cubeRotationManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +51,7 @@ public class AR_Raycast_Script : MonoBehaviour
         bottomButtonPannelAnim = bottomButtonPanel.GetComponent<Animator>();
         automate = GameObject.FindObjectOfType<Automate>();
         startcountdownplay = countDownTimer.GetComponent<Animator>();
+        cubeRotationManager = GameObject.FindObjectOfType<CubeRotationManager>();
     }
 
     // Update is called once per frame
@@ -74,6 +76,7 @@ public class AR_Raycast_Script : MonoBehaviour
                 if(raycastManager.Raycast(ray, hittts, TrackableType.Planes))
             {
                 StartCoroutine(automate.firstShuffle());
+                cubeRotationManager.HideArrows(5.5f);
                 Pose hitpos = hittts[0].pose;
                 spawnedCube =  Instantiate(objectToPlace, new Vector3(hitpos.position.x,hitpos.position.y+0.1f,hitpos.position.z) , hitpos.rotation);
                 topTextPanelAnim.SetTrigger("TopTextPanelUp");

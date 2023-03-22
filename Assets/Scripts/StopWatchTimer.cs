@@ -13,15 +13,20 @@ public class StopWatchTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeText.text = timeStart.ToString("F2");
+        //timeText.text = timeStart.ToString("F2");
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         if(startTimer)
         {
-            StartCoroutine(TimeCounter());
+            if(timeStart >= 0)
+            {
+                timeStart += Time.deltaTime;
+                DisplayTime(timeStart);
+            }
         }
         
     }
@@ -31,10 +36,13 @@ public class StopWatchTimer : MonoBehaviour
         startTimer = true;
     }
 
-    IEnumerator TimeCounter()
+    public void DisplayTime(float timeToDisplay)
     {
-        yield return new WaitForSeconds(waitTime);
-        timeStart += Time.deltaTime;
-        timeText.text = timeStart.ToString("F2");
+        timeToDisplay += 1;
+        float minuits = Mathf.FloorToInt(timeToDisplay / 60);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+        timeText.text = string.Format("{00:00} : {01:00}", minuits, seconds);
     }
+
+    
 }

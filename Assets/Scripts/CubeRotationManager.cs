@@ -17,13 +17,15 @@ public class CubeRotationManager : MonoBehaviour
     ReadCube readCube;
     Automate automate;
     SolveTwoPhase solveTwoPhase;
+    StopWatchTimer stopWatchTimer;
     // Start is called before the first frame update
     void Start()
     {
         readCube = GameObject.FindObjectOfType<ReadCube>();
         automate = GameObject.FindObjectOfType<Automate>();
         solveTwoPhase = GameObject.FindObjectOfType<SolveTwoPhase>();
-        HideArrows(5.5f);
+        stopWatchTimer = GameObject.FindObjectOfType<StopWatchTimer>();
+        //HideArrows(5.5f);
         // cube.transform.Rotate(0, 90, 0, Space.World);
     }
 
@@ -65,6 +67,7 @@ public class CubeRotationManager : MonoBehaviour
         yield return new WaitForSeconds(showTimeDelay);
         controllerArrowPanel.SetActive(true);
         wholeRotateArrowPanel.SetActive(true);
+        stopWatchTimer.StartCounter();
         
         
     }
