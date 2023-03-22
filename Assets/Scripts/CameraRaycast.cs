@@ -33,18 +33,20 @@ public class CameraRaycast : MonoBehaviour
             //controllerArrows.transform.rotation = redSideMesh.transform.rotation;
             controllerArrows.transform.rotation = redSideMesh.transform.rotation;
             //controllerArrows.transform.Rotate(0,90,0,Space.World);
+            Debug.Log("RedSide");
+            //controllerArrows.transform.Rotate(0,90,0,Space.World);
             redSide = true;
-            //blueSide = false;
+            blueSide = false;
         }
 
         if(Physics.Raycast(rayFromFront, out hit, 10000f, layerMask_blue) && !blueSide)
         {
-            controllerArrows.transform.position = blueSideMesh.transform.position;
-            //controllerArrows.transform.rotation = redSideMesh.transform.rotation;
             //controllerArrows.transform.Rotate(0,-90,0,Space.World);
-            Debug.Log("eeeeeeeeeeeeeeeeee");
+            controllerArrows.transform.rotation = blueSideMesh.transform.rotation;
+            //controllerArrows.transform.Rotate(0,-90,0,Space.World);
+            Debug.Log("BlueSide");
             blueSide = true;
-            //redSide = false;
+            redSide = false;
         }
 
         Debug.DrawRay(arCamera.transform.position, arCamera.transform.forward,Color.green);
