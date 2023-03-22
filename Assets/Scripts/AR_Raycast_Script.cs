@@ -10,6 +10,7 @@ public class AR_Raycast_Script : MonoBehaviour
     
     public GameObject topTextPanel;
     public GameObject bottomButtonPanel;
+    public GameObject countDownTimer;
     // private Button tapButton;
     // public GameObject cubeToSpawn;
     // public GameObject testt;
@@ -22,6 +23,7 @@ public class AR_Raycast_Script : MonoBehaviour
     // List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     Animator topTextPanelAnim;
+    Animator startcountdownplay;
     Animator bottomButtonPannelAnim;
     Automate automate;
     bool onlyonce;
@@ -47,6 +49,7 @@ public class AR_Raycast_Script : MonoBehaviour
         topTextPanelAnim = topTextPanel.GetComponent<Animator>();
         bottomButtonPannelAnim = bottomButtonPanel.GetComponent<Animator>();
         automate = GameObject.FindObjectOfType<Automate>();
+        startcountdownplay = countDownTimer.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -74,6 +77,7 @@ public class AR_Raycast_Script : MonoBehaviour
                 Pose hitpos = hittts[0].pose;
                 spawnedCube =  Instantiate(objectToPlace, new Vector3(hitpos.position.x,hitpos.position.y+0.1f,hitpos.position.z) , hitpos.rotation);
                 topTextPanelAnim.SetTrigger("TopTextPanelUp");
+                startcountdownplay.SetTrigger("PlayCountDown");
                 bottomButtonPannelAnim.SetTrigger("PlayBottomButtonPanel");
                 qq.transform.position =  spawnedCube.transform.position; 
                 tapTittle.SetActive(false);

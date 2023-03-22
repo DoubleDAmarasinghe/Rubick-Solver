@@ -61,33 +61,16 @@ public class PiviotRotation : MonoBehaviour
         
     if(layerRotateButtonManager.rightUp)
     {
-        // if(side == cubeStatus.right)
-        // {
-            if(cameraRaycast.orangeSide || cameraRaycast.greenSide || cameraRaycast.whiteSide || cameraRaycast.yellowSide)
-            {
+        if(side == cubeStatus.right)
+        {
+           
                 automate.DoMove("R");
                 dragging = false;
                 Debug.Log("1");
                 layerRotateButtonManager.rightUp = false;
-            }
-
-            if(cameraRaycast.redSide)
-            {
-                automate.DoMove("B");
-                dragging = false;
-                Debug.Log("1");
-                layerRotateButtonManager.rightUp = false;
-            }
-
-            if(cameraRaycast.blueSide)
-            {
-                automate.DoMove("F'");
-                dragging = false;
-                Debug.Log("1");
-                layerRotateButtonManager.rightUp = false;
-            }
+           
             
-        // }
+        }
 
         if(side == cubeStatus.left)
         {
