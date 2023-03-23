@@ -18,6 +18,8 @@ public class AR_Raycast_Script : MonoBehaviour
     // public GameObject testt;
     [HideInInspector]
     public GameObject spawnedCube;
+    [HideInInspector]
+    public GameObject cubeShadow;
     public GameObject tapTittle;
     public GameObject heightSlider;
     [SerializeField] TMP_Text sampletext;
@@ -38,6 +40,7 @@ public class AR_Raycast_Script : MonoBehaviour
 
 
     public GameObject qq;
+    public GameObject rubikShadow;
 
 
 
@@ -73,6 +76,15 @@ public class AR_Raycast_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(getSliderValue.changedHeight > 0.8)
+        {
+            rubikShadow.SetActive(false);
+        }
+        if(getSliderValue.changedHeight < 0.8)
+        {
+            rubikShadow.SetActive(true);
+        }
+
         
        
         
@@ -95,14 +107,17 @@ public class AR_Raycast_Script : MonoBehaviour
                 //cubeRotationManager.HideArrows(5.5f);
                 Pose hitpos = hittts[0].pose;
                 spawnedCube =  Instantiate(objectToPlace, new Vector3(hitpos.position.x, hitpos.position.y, hitpos.position.z) , hitpos.rotation);
+                //cubeShadow = Instantiate(objectToPlace, new Vector3(hitpos.position.x, hitpos.position.y, hitpos.position.z) , hitpos.rotation);
                 //topTextPanelAnim.SetTrigger("TopTextPanelUp");
                 //startcountdownplay.SetTrigger("PlayCountDown");
                 //bottomButtonPannelAnim.SetTrigger("PlayBottomButtonPanel");
                 qq.transform.position =  spawnedCube.transform.position; 
+                rubikShadow.transform.position = spawnedCube.transform.position; 
                 tapTittle.SetActive(false);
 
                 //qq.SetActive(false);
                 qq.transform.localScale = new Vector3(0.05f,0.05f,0.05f);
+                rubikShadow.transform.localScale = new Vector3(0.05f,0.05f,0.05f);
                 tapTittle.SetActive(false);
                 onlyonce = true;
                 canSetHeight = true;
