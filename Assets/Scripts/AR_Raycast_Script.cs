@@ -19,6 +19,7 @@ public class AR_Raycast_Script : MonoBehaviour
     [HideInInspector]
     public GameObject spawnedCube;
     public GameObject tapTittle;
+    public GameObject heightSlider;
     [SerializeField] TMP_Text sampletext;
     // public GameObject test;
     // bool objectSpawned;
@@ -26,11 +27,14 @@ public class AR_Raycast_Script : MonoBehaviour
     // List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     Animator topTextPanelAnim;
+    Animator SliderUp;
+    Animator SliderDown;
     Animator startcountdownplay;
     Animator bottomButtonPannelAnim;
     Automate automate;
     bool onlyonce;
-
+    bool canSetHeight;
+    bool canStart;
 
 
     public GameObject qq;
@@ -49,12 +53,16 @@ public class AR_Raycast_Script : MonoBehaviour
     void Start()
     {
         onlyonce = false;
+        canSetHeight = false;
+        canStart = false;
         // objectSpawned = false;
         // arRaycastManager = GetComponent<ARRaycastManager>();
 
         // tapButton = gameObject.GetComponent<Button>();
         topTextPanelAnim = topTextPanel.GetComponent<Animator>();
         bottomButtonPannelAnim = bottomButtonPanel.GetComponent<Animator>();
+        SliderUp = heightSlider.GetComponent<Animator>();
+        SliderDown = heightSlider.GetComponent<Animator>();
         automate = GameObject.FindObjectOfType<Automate>();
         startcountdownplay = countDownTimer.GetComponent<Animator>();
         cubeRotationManager = GameObject.FindObjectOfType<CubeRotationManager>();
@@ -67,8 +75,8 @@ public class AR_Raycast_Script : MonoBehaviour
     {
         
        
-        sampletext.text = getSliderValue.changedHeight.ToString();
-                
+        
+        sampletext.text = getSliderValue.changedHeight.ToString();     
 
         Ray ray = arcamera.ScreenPointToRay(Input.mousePosition);
         
@@ -79,17 +87,17 @@ public class AR_Raycast_Script : MonoBehaviour
             if(!onlyonce)
             {
                 
-                // StartCoroutine(automate.firstShuffle());
+               
                 
                 if(raycastManager.Raycast(ray, hittts, TrackableType.Planes))
             {
-                StartCoroutine(automate.firstShuffle());
-                cubeRotationManager.HideArrows(5.5f);
+                //StartCoroutine(automate.firstShuffle());
+                //cubeRotationManager.HideArrows(5.5f);
                 Pose hitpos = hittts[0].pose;
                 spawnedCube =  Instantiate(objectToPlace, new Vector3(hitpos.position.x, hitpos.position.y, hitpos.position.z) , hitpos.rotation);
-                topTextPanelAnim.SetTrigger("TopTextPanelUp");
-                startcountdownplay.SetTrigger("PlayCountDown");
-                bottomButtonPannelAnim.SetTrigger("PlayBottomButtonPanel");
+                //topTextPanelAnim.SetTrigger("TopTextPanelUp");
+                //startcountdownplay.SetTrigger("PlayCountDown");
+                //bottomButtonPannelAnim.SetTrigger("PlayBottomButtonPanel");
                 qq.transform.position =  spawnedCube.transform.position; 
                 tapTittle.SetActive(false);
 
@@ -97,21 +105,44 @@ public class AR_Raycast_Script : MonoBehaviour
                 qq.transform.localScale = new Vector3(0.05f,0.05f,0.05f);
                 tapTittle.SetActive(false);
                 onlyonce = true;
+                canSetHeight = true;
+                SliderUp.SetTrigger("SliderUp");
+                
+                //heightSlider.SetActive(true);
             }
             }
             
         }
 
-        qq.transform.position = new Vector3(spawnedCube.transform.position.x, spawnedCube.transform.position.y + getSliderValue.changedHeight, spawnedCube.transform.position.z); 
-        
+        if(canSetHeight)
+        {
             
-                
-        
+            qq.transform.position = new Vector3(spawnedCube.transform.position.x, spawnedCube.transform.position.y + getSliderValue.changedHeight, spawnedCube.transform.position.z); 
+        }
 
-                
+        if(canStart)
+        {
+            StartCoroutine(automate.firstShuffle());
+            cubeRotationManager.HideArrows(5.5f);
+            topTextPanelAnim.SetTrigger("TopTextPanelUp");
+            startcountdownplay.SetTrigger("PlayCountDown");
+            bottomButtonPannelAnim.SetTrigger("PlayBottomButtonPanel");
+            canStart = false;
+            canSetHeight = false;
+            //heightSlider.SetActive(false);
+            SliderUp.SetTrigger("SliderDown");
+        }
 
         
         
+    
+
+    }        
+                
+      public void GameStart()
+    {  
+        canStart = true;
+ 
     }
 
     public void AddNew()

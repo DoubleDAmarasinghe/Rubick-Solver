@@ -6716,6 +6716,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 714780549}
+  - component: {fileID: 714780551}
+  - component: {fileID: 714780550}
   m_Layer: 5
   m_Name: HeightSlider
   m_TagString: Untagged
@@ -6747,6 +6749,38 @@ RectTransform:
   m_AnchoredPosition: {x: 453.88, y: -195.64996}
   m_SizeDelta: {x: 100, y: -2211.3003}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &714780550
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714780548}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ca06c1494cb94143ab0ba66a18192cb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &714780551
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714780548}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &742572130
 GameObject:
   m_ObjectHideFlags: 0
@@ -7211,6 +7245,7 @@ MonoBehaviour:
   countDownTimer: {fileID: 965679991}
   spawnedCube: {fileID: 0}
   tapTittle: {fileID: 751667207}
+  heightSlider: {fileID: 714780548}
   sampletext: {fileID: 252116701}
   qq: {fileID: 1477737816}
   raycastManager: {fileID: 388525033}
@@ -14585,7 +14620,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 782628379}
         m_TargetAssemblyTypeName: AR_Raycast_Script, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: GameStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
