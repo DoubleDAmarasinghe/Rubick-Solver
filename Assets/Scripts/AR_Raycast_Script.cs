@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using TMPro;
+
 
 public class AR_Raycast_Script : MonoBehaviour
 {
@@ -17,6 +19,7 @@ public class AR_Raycast_Script : MonoBehaviour
     [HideInInspector]
     public GameObject spawnedCube;
     public GameObject tapTittle;
+    [SerializeField] TMP_Text sampletext;
     // public GameObject test;
     // bool objectSpawned;
     // ARRaycastManager arRaycastManager;
@@ -39,6 +42,9 @@ public class AR_Raycast_Script : MonoBehaviour
     public Camera arcamera;
     private List<ARRaycastHit> hittts = new List<ARRaycastHit>();
     private CubeRotationManager cubeRotationManager;
+    private GetSliderValue getSliderValue;
+    
+    float changedHeight;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +58,8 @@ public class AR_Raycast_Script : MonoBehaviour
         automate = GameObject.FindObjectOfType<Automate>();
         startcountdownplay = countDownTimer.GetComponent<Animator>();
         cubeRotationManager = GameObject.FindObjectOfType<CubeRotationManager>();
+        getSliderValue = GameObject.FindObjectOfType<GetSliderValue>();
+        
     }
 
     // Update is called once per frame
@@ -59,7 +67,7 @@ public class AR_Raycast_Script : MonoBehaviour
     {
         
        
-            
+        sampletext.text = getSliderValue.changedHeight.ToString();
                 
 
         Ray ray = arcamera.ScreenPointToRay(Input.mousePosition);
@@ -78,7 +86,7 @@ public class AR_Raycast_Script : MonoBehaviour
                 StartCoroutine(automate.firstShuffle());
                 cubeRotationManager.HideArrows(5.5f);
                 Pose hitpos = hittts[0].pose;
-                spawnedCube =  Instantiate(objectToPlace, new Vector3(hitpos.position.x,hitpos.position.y+0.1f,hitpos.position.z) , hitpos.rotation);
+                spawnedCube =  Instantiate(objectToPlace, new Vector3(hitpos.position.x, hitpos.position.y, hitpos.position.z) , hitpos.rotation);
                 topTextPanelAnim.SetTrigger("TopTextPanelUp");
                 startcountdownplay.SetTrigger("PlayCountDown");
                 bottomButtonPannelAnim.SetTrigger("PlayBottomButtonPanel");
@@ -93,6 +101,8 @@ public class AR_Raycast_Script : MonoBehaviour
             }
             
         }
+
+        qq.transform.position = new Vector3(spawnedCube.transform.position.x, spawnedCube.transform.position.y + getSliderValue.changedHeight, spawnedCube.transform.position.z); 
         
             
                 
