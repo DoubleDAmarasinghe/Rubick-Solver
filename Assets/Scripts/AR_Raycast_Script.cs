@@ -19,7 +19,7 @@ public class AR_Raycast_Script : MonoBehaviour
     [HideInInspector]
     public GameObject spawnedCube;
     [HideInInspector]
-    public GameObject cubeShadow;
+    //public GameObject cubeShadow;
     public GameObject tapTittle;
     public GameObject heightSlider;
     [SerializeField] TMP_Text sampletext;
@@ -40,7 +40,7 @@ public class AR_Raycast_Script : MonoBehaviour
 
 
     public GameObject qq;
-    public GameObject rubikShadow;
+    //public GameObject rubikShadow;
 
 
 
@@ -76,14 +76,14 @@ public class AR_Raycast_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(getSliderValue.changedHeight > 0.8)
-        {
-            rubikShadow.SetActive(false);
-        }
-        if(getSliderValue.changedHeight < 0.8)
-        {
-            rubikShadow.SetActive(true);
-        }
+        // if(getSliderValue.changedHeight > 0.8)
+        // {
+        //     rubikShadow.SetActive(false);
+        // }
+        // if(getSliderValue.changedHeight < 0.8)
+        // {
+        //     rubikShadow.SetActive(true);
+        // }
 
         
        
@@ -112,12 +112,12 @@ public class AR_Raycast_Script : MonoBehaviour
                 //startcountdownplay.SetTrigger("PlayCountDown");
                 //bottomButtonPannelAnim.SetTrigger("PlayBottomButtonPanel");
                 qq.transform.position =  spawnedCube.transform.position; 
-                rubikShadow.transform.position = spawnedCube.transform.position; 
+                // rubikShadow.transform.position = spawnedCube.transform.position; 
                 tapTittle.SetActive(false);
 
                 //qq.SetActive(false);
                 qq.transform.localScale = new Vector3(0.05f,0.05f,0.05f);
-                rubikShadow.transform.localScale = new Vector3(0.05f,0.05f,0.05f);
+                // rubikShadow.transform.localScale = new Vector3(0.05f,0.05f,0.05f);
                 tapTittle.SetActive(false);
                 onlyonce = true;
                 canSetHeight = true;

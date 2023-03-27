@@ -16,7 +16,6 @@ public class Automate : MonoBehaviour
     public bool shuffle = false;
 
     public AudioSource source;
-    public GameObject LayerMoveArrowSet;
     
     
     // Start is called before the first frame update
@@ -52,7 +51,6 @@ public class Automate : MonoBehaviour
         }
         moveList = moves;
         shuffle = true;
-        LayerMoveArrowSet.SetActive(true);
     }
 
     public void Shuffle()
