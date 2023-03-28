@@ -1,0 +1,1180 @@
+fileFormatVersion: 2
+guid: 3e9f55f0c90b94c4087dce9b921c29f5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CubeGIF_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2263
+        width: 332
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af76fc434893f1146981b57d8d23a75a
+      internalID: -1886728496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_1
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 2263
+        width: 318
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c18b30d61889240a6576be42721fe4
+      internalID: -1409704452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_2
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 2263
+        width: 319
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ce58ab49bed514693f38ad9e569805
+      internalID: 519538519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_3
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 2263
+        width: 319
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492f235f71bff4f4ea66c4396a793887
+      internalID: -342736733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_4
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 2263
+        width: 1061
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852a9e10e2f102e4890fe2a94d1b6a80
+      internalID: -26011430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_5
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 2263
+        width: 319
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c71661d5b1537d40b95b5493666cee0
+      internalID: -1934162502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_6
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 2263
+        width: 316
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f9c7fe1cc31ad349b537e5fd92c381c
+      internalID: -1370942797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_7
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1886
+        width: 308
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d10934a3662d741ba61d1a48c30aea
+      internalID: 699302235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_8
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1886
+        width: 311
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d91632a303a0b44b7c6371fdad9329
+      internalID: 705826342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_9
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 1886
+        width: 312
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9b6eb5420d7494fbade59b332f0a03
+      internalID: -1017423450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_10
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 1886
+        width: 307
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5efb469b0b8e18048993157f1f0d838f
+      internalID: 678072048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_11
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 1887
+        width: 301
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413e43223d0e54648b2b0b934c0a275a
+      internalID: -711639821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_12
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 1894
+        width: 299
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3004d660e7d57942ac0b6cd4e5f9e7b
+      internalID: 416490521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_13
+      rect:
+        serializedVersion: 2
+        x: 2156
+        y: 1899
+        width: 294
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 161150ad1775c7245b27878b64132163
+      internalID: -1406121789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_14
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1522
+        width: 281
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cbdcd4369c064b478c2532fdacdf9e8
+      internalID: 1980497192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_15
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 1527
+        width: 286
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d72761763a2f441a5f97a5add64aee
+      internalID: 1165311949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_16
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 1530
+        width: 285
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dee707729364944488dd06ad0f1ed09
+      internalID: 231446539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_17
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 1530
+        width: 278
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9997fced08cdaa84f9eaa2ccef68e96d
+      internalID: 715072888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_18
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 1534
+        width: 268
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 945441183ad0a6445ad0911424a32b03
+      internalID: 1684865853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_19
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 1539
+        width: 271
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b772664aee97d05458a06100012885c0
+      internalID: -1423019480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_20
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 1540
+        width: 269
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 785cf831e90ee4048adf3b4b1db59a2e
+      internalID: -427354556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_21
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1165
+        width: 264
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86bdec760e2460d40b83612c5e1b1be0
+      internalID: 25752893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_22
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 1165
+        width: 266
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7876ba808e2f6646ba814e9a9786a1b
+      internalID: -558539400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_23
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 1164
+        width: 266
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc9ba185ffbfa644baa3a54ef2fb0e7
+      internalID: 488721746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_24
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1160
+        width: 270
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc87dc9a71796049bb8dcf4aa4cf9b1
+      internalID: -170259982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_25
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 1159
+        width: 271
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b95fd8fadab256469ff41341ec2dc53
+      internalID: 957094597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_26
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 1159
+        width: 273
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b23c37e9a2d2447aec1a8eb127cd3b
+      internalID: 979383682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_27
+      rect:
+        serializedVersion: 2
+        x: 2157
+        y: 1160
+        width: 271
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a35897903b0374c839d8817c629eab
+      internalID: 263136438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_28
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 790
+        width: 270
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd750e4daa460a45a520a289e043828
+      internalID: -386430599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_29
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 783
+        width: 286
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f3ffd6beea870545a398f82bcf135d4
+      internalID: -1845163231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_30
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 773
+        width: 302
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5d24a3fe7776f408bc20ec98e1ee24
+      internalID: 1915738404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_31
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 767
+        width: 316
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c00783bf794cf439faa0f000d4d792
+      internalID: -778504068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_32
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 767
+        width: 324
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0823f552e29e06342a226f0800224348
+      internalID: -14589468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_33
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 772
+        width: 326
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de6803ac2736e24195647d891907af5
+      internalID: 1222297627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_34
+      rect:
+        serializedVersion: 2
+        x: 2132
+        y: 761
+        width: 319
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f5217ade35990419dc2482a65f54e2
+      internalID: -2065038156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_35
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 382
+        width: 320
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced11898694716a4593a8191c7fd225c
+      internalID: -1733847177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_36
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 382
+        width: 325
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd15e6cc2904c34d8a57c811b4793ca
+      internalID: -1173389750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_37
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 382
+        width: 322
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b001ad4566dcc0459136c841ff781ac
+      internalID: -2027721800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_38
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 382
+        width: 316
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95e5496016cf66349abb502911bb87db
+      internalID: -361915896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_39
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 382
+        width: 321
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef36e7f123f8cf4d85729eea90de2f4
+      internalID: 904830025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_40
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 382
+        width: 320
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67eb2a20f971959449dbc4dcd69b868d
+      internalID: 1675707208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_41
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 382
+        width: 325
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9710b6843ad9d442ad33fc406ace841
+      internalID: 57987759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 336
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca431fc78b7f9fe4da188e6416bf280b
+      internalID: -886238172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_43
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 7
+        width: 322
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5b19ef6509c3d4b80e349f63849a7b
+      internalID: 926019113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_44
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 7
+        width: 320
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e5f5ff9233baf46b339cfcf31031ca
+      internalID: -1623279232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_45
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 7
+        width: 316
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ffff2b0817973d4994f338dacb47d85
+      internalID: 1351022538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeGIF_46
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 0
+        width: 1061
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 565e19ca5b9fad74ebfec3feb36d5c18
+      internalID: -346441143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 8adc0f670bab25141a4ea7a8c1e89a55
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      CubeGIF_35: -1733847177
+      CubeGIF_5: -1934162502
+      CubeGIF_14: 1980497192
+      CubeGIF_27: 263136438
+      CubeGIF_10: 678072048
+      CubeGIF_28: -386430599
+      CubeGIF_12: 416490521
+      CubeGIF_32: -14589468
+      CubeGIF_20: -427354556
+      CubeGIF_30: 1915738404
+      CubeGIF_4: -26011430
+      CubeGIF_0: -1886728496
+      CubeGIF_42: -886238172
+      CubeGIF_26: 979383682
+      CubeGIF_37: -2027721800
+      CubeGIF_44: -1623279232
+      CubeGIF_46: -346441143
+      CubeGIF_24: -170259982
+      CubeGIF_22: -558539400
+      CubeGIF_17: 715072888
+      CubeGIF_23: 488721746
+      CubeGIF_9: -1017423450
+      CubeGIF_21: 25752893
+      CubeGIF_13: -1406121789
+      CubeGIF_6: -1370942797
+      CubeGIF_7: 699302235
+      CubeGIF_36: -1173389750
+      CubeGIF_41: 57987759
+      CubeGIF_43: 926019113
+      CubeGIF_34: -2065038156
+      CubeGIF_25: 957094597
+      CubeGIF_18: 1684865853
+      CubeGIF_11: -711639821
+      CubeGIF_19: -1423019480
+      CubeGIF_45: 1351022538
+      CubeGIF_33: 1222297627
+      CubeGIF_1: -1409704452
+      CubeGIF_29: -1845163231
+      CubeGIF_38: -361915896
+      CubeGIF_2: 519538519
+      CubeGIF_8: 705826342
+      CubeGIF_31: -778504068
+      CubeGIF_16: 231446539
+      CubeGIF_3: -342736733
+      CubeGIF_39: 904830025
+      CubeGIF_40: 1675707208
+      CubeGIF_15: 1165311949
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
