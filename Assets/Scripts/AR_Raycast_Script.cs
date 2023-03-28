@@ -50,6 +50,7 @@ public class AR_Raycast_Script : MonoBehaviour
     private List<ARRaycastHit> hittts = new List<ARRaycastHit>();
     private CubeRotationManager cubeRotationManager;
     private GetSliderValue getSliderValue;
+    private SoundManager soundManager;
     
     float changedHeight;
     // Start is called before the first frame update
@@ -70,6 +71,7 @@ public class AR_Raycast_Script : MonoBehaviour
         startcountdownplay = countDownTimer.GetComponent<Animator>();
         cubeRotationManager = GameObject.FindObjectOfType<CubeRotationManager>();
         getSliderValue = GameObject.FindObjectOfType<GetSliderValue>();
+        soundManager = GameObject.FindObjectOfType<SoundManager>();
         
     }
 
@@ -100,7 +102,7 @@ public class AR_Raycast_Script : MonoBehaviour
             {
                 
                
-                
+                soundManager.PlayPopUpSound();
                 if(raycastManager.Raycast(ray, hittts, TrackableType.Planes))
             {
                 //StartCoroutine(automate.firstShuffle());
