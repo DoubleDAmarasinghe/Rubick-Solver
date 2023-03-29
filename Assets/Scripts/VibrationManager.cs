@@ -4,8 +4,22 @@ using UnityEngine;
 
 public class VibrationManager : MonoBehaviour
 {
+    ToggleScript toggleScript;
+
+    private void Start()
+    {
+        
+        
+        toggleScript = GameObject.FindGameObjectWithTag("Toggle3").GetComponent<ToggleScript>();
+        toggleScript.OnSwitchButtonClickedVibrate();
+        
+    }
     public void InstantVibration()
     {
-        Vibration.Vibrate(10);
+        if(toggleScript.switchStateVibrate == 1)
+        {
+            Vibration.Vibrate(10);
+        }
+        
     }
 }

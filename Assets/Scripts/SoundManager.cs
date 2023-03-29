@@ -4,16 +4,30 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+    ToggleScript toggleScript;
     public AudioSource tapAudioSource;
     public AudioSource popupAudioSource;
+    private void Start()
+    {
+        toggleScript = GameObject.FindGameObjectWithTag("Toggle1").GetComponent<ToggleScript>();
+        toggleScript.OnSwitchButtonClickedAudio();
+    }
     // Start is called before the first frame update
     public void PlayTapSound()
     {
-        tapAudioSource.Play();
+        if(toggleScript.switchStateAudio == 1)
+        {
+            tapAudioSource.Play();
+        }
+        
     }
 
     public void PlayPopUpSound()
     {
-        popupAudioSource.Play();
+        if(toggleScript.switchStateAudio == 1)
+        {
+            popupAudioSource.Play();
+        }
+        
     }
 }

@@ -9,7 +9,8 @@ using TMPro;
 
 public class AR_Raycast_Script : MonoBehaviour
 {
-    
+    [SerializeField] GameObject tapToPlace;
+    [SerializeField] GameObject mainTittle;
     public GameObject topTextPanel;
     public GameObject bottomButtonPanel;
     public GameObject countDownTimer;
@@ -29,10 +30,12 @@ public class AR_Raycast_Script : MonoBehaviour
     // List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     Animator topTextPanelAnim;
+    Animator tapToPlaceAnim;
     Animator SliderUp;
     Animator SliderDown;
     Animator startcountdownplay;
     Animator bottomButtonPannelAnim;
+    Animator mainTittleDown;
     Automate automate;
     bool onlyonce;
     bool canSetHeight;
@@ -56,7 +59,7 @@ public class AR_Raycast_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        onlyonce = false;
+        onlyonce = true;
         canSetHeight = false;
         canStart = false;
         // objectSpawned = false;
@@ -72,7 +75,8 @@ public class AR_Raycast_Script : MonoBehaviour
         cubeRotationManager = GameObject.FindObjectOfType<CubeRotationManager>();
         getSliderValue = GameObject.FindObjectOfType<GetSliderValue>();
         soundManager = GameObject.FindObjectOfType<SoundManager>();
-        
+        mainTittleDown = mainTittle.GetComponent<Animator>();
+        tapToPlaceAnim = tapToPlace.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -151,10 +155,20 @@ public class AR_Raycast_Script : MonoBehaviour
         }
 
         
-        
+       
     
 
-    }        
+    } 
+
+    public void  GamePlayButton()
+    {
+        tapToPlace.SetActive(true);
+        tapToPlaceAnim.SetTrigger("TapToPlaceUp");
+        //mainTittle.SetActive(false);
+        mainTittleDown.SetTrigger("MainTittleOut");
+        onlyonce = false;
+        
+    }       
                 
       public void GameStart()
     {  
