@@ -10,6 +10,7 @@ using TMPro;
 public class AR_Raycast_Script : MonoBehaviour
 {
     [SerializeField] GameObject tapToPlace;
+    [SerializeField] Button playButton;
     [SerializeField] GameObject mainTittle;
     public GameObject topTextPanel;
     public GameObject bottomButtonPanel;
@@ -167,6 +168,7 @@ public class AR_Raycast_Script : MonoBehaviour
         //mainTittle.SetActive(false);
         mainTittleDown.SetTrigger("MainTittleOut");
         onlyonce = false;
+        playButton.gameObject.SetActive(false);
         
     }       
                 
