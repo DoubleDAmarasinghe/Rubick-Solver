@@ -44,5 +44,15 @@ public class StopWatchTimer : MonoBehaviour
         timeText.text = string.Format("{00:00} : {01:00}", minuits, seconds);
     }
 
+    public void PauseTimer()
+    {
+        startTimer = false;
+    }
+
+    public void ResumeTimer()
+    {
+        startTimer = true;
+    }
+
     
 }
