@@ -55,6 +55,7 @@ public class AR_Raycast_Script : MonoBehaviour
     private CubeRotationManager cubeRotationManager;
     private GetSliderValue getSliderValue;
     private SoundManager soundManager;
+    private PlaceIndicator placeIndicator;
     
     float changedHeight;
     // Start is called before the first frame update
@@ -78,6 +79,7 @@ public class AR_Raycast_Script : MonoBehaviour
         soundManager = GameObject.FindObjectOfType<SoundManager>();
         mainTittleDown = mainTittle.GetComponent<Animator>();
         tapToPlaceAnim = tapToPlace.GetComponent<Animator>();
+        placeIndicator = GameObject.FindObjectOfType<PlaceIndicator>();
     }
 
     // Update is called once per frame
@@ -108,6 +110,7 @@ public class AR_Raycast_Script : MonoBehaviour
                 
                
                 soundManager.PlayPopUpSound();
+                placeIndicator.showIndicator = false;
                 if(raycastManager.Raycast(ray, hittts, TrackableType.Planes))
             {
                 //StartCoroutine(automate.firstShuffle());
@@ -153,6 +156,7 @@ public class AR_Raycast_Script : MonoBehaviour
             canSetHeight = false;
             //heightSlider.SetActive(false);
             SliderUp.SetTrigger("SliderDown");
+            
         }
 
         
@@ -169,13 +173,15 @@ public class AR_Raycast_Script : MonoBehaviour
         mainTittleDown.SetTrigger("MainTittleOut");
         onlyonce = false;
         playButton.gameObject.SetActive(false);
+        placeIndicator.showIndicator = true;
         
     }       
                 
       public void GameStart()
     {  
         canStart = true;
- 
+        placeIndicator.gameObject.SetActive(false);
+        
     }
 
     public void AddNew()
