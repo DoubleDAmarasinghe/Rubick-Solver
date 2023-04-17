@@ -64,4 +64,6 @@ public class LayerRotateButtonManager : MonoBehaviour
     {
         leftDownLeft = true;
     }
+
+   
 }
