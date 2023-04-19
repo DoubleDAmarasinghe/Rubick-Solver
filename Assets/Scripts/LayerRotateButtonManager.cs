@@ -14,6 +14,13 @@ public class LayerRotateButtonManager : MonoBehaviour
     public bool leftDown;
     public bool leftUpLeft;
     public bool leftDownLeft;
+
+    public bool midUp;
+    public bool midDown;
+
+    public bool midRight;
+
+    public bool midLeft;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,5 +70,25 @@ public class LayerRotateButtonManager : MonoBehaviour
     public void SetLeftDownLeft()
     {
         leftDownLeft = true;
+    }
+
+    public void SetMidUp()
+    {
+        midUp = true;
+    }
+
+    public void SetMidDown()
+    {
+        midDown = true;
+    }
+
+    public void SetMidRight()
+    {
+        midRight = true;
+    }
+
+    public void SetMidLeft()
+    {
+        midLeft = true;
     }
 }

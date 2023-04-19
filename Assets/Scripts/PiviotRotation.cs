@@ -23,6 +23,8 @@ public class PiviotRotation : MonoBehaviour
     private Quaternion targetQuaternion;
     private bool autoRotating = false;
 
+    private CubeRotationManager cubeRotationManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,7 @@ public class PiviotRotation : MonoBehaviour
         layerRotateButtonManager = GameObject.FindObjectOfType<LayerRotateButtonManager>();
         selectFace = GameObject.FindObjectOfType<SelectFace>();
         cameraRaycast = GameObject.FindObjectOfType<CameraRaycast>();
+        cubeRotationManager = GameObject.FindObjectOfType<CubeRotationManager>();
     }
 
     // Update is called once per frame
@@ -40,13 +43,6 @@ public class PiviotRotation : MonoBehaviour
         if(dragging && !autoRotating)
         {
             SpinSide(activeSide);
-            
-            //RotateToRightAngle();
-            // if(Input.GetMouseButtonUp(0))
-            // {
-            //     dragging = false;
-            // }
-            
         }
         if(autoRotating)
         {
@@ -63,54 +59,50 @@ public class PiviotRotation : MonoBehaviour
     {
         if(side == cubeStatus.right)
         {
-           
-                automate.DoMove("R");
-                dragging = false;
-                Debug.Log("1");
-                layerRotateButtonManager.rightUp = false;
-           
-            
-        }
-
-        if(side == cubeStatus.left)
-        {
-            automate.DoMove("L");
+            automate.DoMove("R");
             dragging = false;
-            Debug.Log("2");
             layerRotateButtonManager.rightUp = false;
         }
 
-        if(side == cubeStatus.up)
-        {
-            automate.DoMove("U");
-            dragging = false;
-            Debug.Log("3");
-            layerRotateButtonManager.rightUp = false;
-        }
+        // if(side == cubeStatus.left)
+        // {
+        //     automate.DoMove("L");
+        //     dragging = false;
+        //     Debug.Log("2");
+        //     layerRotateButtonManager.rightUp = false;
+        // }
 
-        if(side == cubeStatus.down)
-        {
-            automate.DoMove("D");
-            dragging = false;
-            Debug.Log("4");
-            layerRotateButtonManager.rightUp = false;
-        }
+        // if(side == cubeStatus.up)
+        // {
+        //     automate.DoMove("L");
+        //     dragging = false;
+        //     Debug.Log("3");
+        //     layerRotateButtonManager.rightUp = false;
+        // }
 
-        if(side == cubeStatus.front)
-        {
-            automate.DoMove("F");
-            dragging = false;
-            Debug.Log("5");
-            layerRotateButtonManager.rightUp = false;
-        }
+        // if(side == cubeStatus.down)
+        // {
+        //     automate.DoMove("L");
+        //     dragging = false;
+        //     Debug.Log("4");
+        //     layerRotateButtonManager.rightUp = false;
+        // }
 
-        if(side == cubeStatus.back)
-        {
-            automate.DoMove("B");
-            dragging = false;
-            Debug.Log("6");
-            layerRotateButtonManager.rightUp = false;
-        }
+        // if(side == cubeStatus.front)
+        // {
+        //     automate.DoMove("B");
+        //     dragging = false;
+        //     Debug.Log("5");
+        //     layerRotateButtonManager.rightUp = false;
+        // }
+
+        // if(side == cubeStatus.back)
+        // {
+        //     automate.DoMove("F");
+        //     dragging = false;
+        //     Debug.Log("6");
+        //     layerRotateButtonManager.rightUp = false;
+        // }
 
         
     }
@@ -121,49 +113,48 @@ public class PiviotRotation : MonoBehaviour
         {
             automate.DoMove("R'");
             dragging = false;
-            Debug.Log("11");
             layerRotateButtonManager.rightDown = false;
         }
 
-        if(side == cubeStatus.left)
-        {
-            automate.DoMove("L'");
-            dragging = false;
-            Debug.Log("12");
-            layerRotateButtonManager.rightDown = false;
-        }
+        // if(side == cubeStatus.left)
+        // {
+        //     automate.DoMove("L'");
+        //     dragging = false;
+        //     Debug.Log("12");
+        //     layerRotateButtonManager.rightDown = false;
+        // }
 
-        if(side == cubeStatus.up)
-        {
-            automate.DoMove("U'");
-            dragging = false;
-            Debug.Log("13");
-            layerRotateButtonManager.rightDown = false;
-        }
+        // if(side == cubeStatus.up)
+        // {
+        //     automate.DoMove("R'");
+        //     dragging = false;
+        //     Debug.Log("13");
+        //     layerRotateButtonManager.rightDown = false;
+        // }
 
-        if(side == cubeStatus.down)
-        {
-            automate.DoMove("D'");
-            dragging = false;
-            Debug.Log("14");
-            layerRotateButtonManager.rightDown = false;
-        }
+        // if(side == cubeStatus.down)
+        // {
+        //     automate.DoMove("R'");
+        //     dragging = false;
+        //     Debug.Log("14");
+        //     layerRotateButtonManager.rightDown = false;
+        // }
 
-        if(side == cubeStatus.front)
-        {
-            automate.DoMove("F'");
-            dragging = false;
-            Debug.Log("15");
-            layerRotateButtonManager.rightDown = false;
-        }
+        // if(side == cubeStatus.front)
+        // {
+        //     automate.DoMove("B'");
+        //     dragging = false;
+        //     Debug.Log("15");
+        //     layerRotateButtonManager.rightDown = false;
+        // }
 
-        if(side == cubeStatus.back)
-        {
-            automate.DoMove("B'");
-            dragging = false;
-            Debug.Log("16");
-            layerRotateButtonManager.rightDown = false;
-        }
+        // if(side == cubeStatus.back)
+        // {
+        //     automate.DoMove("F'");
+        //     dragging = false;
+        //     Debug.Log("16");
+        //     layerRotateButtonManager.rightDown = false;
+        // }
 
         
     }
@@ -172,51 +163,50 @@ public class PiviotRotation : MonoBehaviour
     {
         if(side == cubeStatus.right)
         {
-            automate.DoMove("R'");
-            dragging = false;
-            Debug.Log("11");
-            layerRotateButtonManager.rightUpRight = false;
-        }
-
-        if(side == cubeStatus.left)
-        {
-            automate.DoMove("L'");
-            dragging = false;
-            Debug.Log("12");
-            layerRotateButtonManager.rightUpRight = false;
-        }
-
-        if(side == cubeStatus.up)
-        {
             automate.DoMove("U'");
             dragging = false;
-            Debug.Log("13");
             layerRotateButtonManager.rightUpRight = false;
         }
 
-        if(side == cubeStatus.down)
-        {
-            automate.DoMove("D'");
-            dragging = false;
-            Debug.Log("14");
-            layerRotateButtonManager.rightUpRight = false;
-        }
+        // if(side == cubeStatus.left)
+        // {
+        //     automate.DoMove("U'");
+        //     dragging = false;
+        //     Debug.Log("12");
+        //     layerRotateButtonManager.rightUpRight = false;
+        // }
 
-        if(side == cubeStatus.front)
-        {
-            automate.DoMove("F'");
-            dragging = false;
-            Debug.Log("15");
-            layerRotateButtonManager.rightUpRight = false;
-        }
+        // if(side == cubeStatus.up)
+        // {
+        //     automate.DoMove("B'");
+        //     dragging = false;
+        //     Debug.Log("13");
+        //     layerRotateButtonManager.rightUpRight = false;
+        // }
 
-        if(side == cubeStatus.back)
-        {
-            automate.DoMove("B'");
-            dragging = false;
-            Debug.Log("16");
-            layerRotateButtonManager.rightUpRight = false;
-        }
+        // if(side == cubeStatus.down)
+        // {
+        //     automate.DoMove("F'");
+        //     dragging = false;
+        //     Debug.Log("14");
+        //     layerRotateButtonManager.rightUpRight = false;
+        // }
+
+        // if(side == cubeStatus.front)
+        // {
+        //     automate.DoMove("U'");
+        //     dragging = false;
+        //     Debug.Log("15");
+        //     layerRotateButtonManager.rightUpRight = false;
+        // }
+
+        // if(side == cubeStatus.back)
+        // {
+        //     automate.DoMove("U'");
+        //     dragging = false;
+        //     Debug.Log("16");
+        //     layerRotateButtonManager.rightUpRight = false;
+        // }
 
         
     }
@@ -225,51 +215,50 @@ public class PiviotRotation : MonoBehaviour
     {
         if(side == cubeStatus.right)
         {
-            automate.DoMove("R");
-            dragging = false;
-            Debug.Log("11");
-            layerRotateButtonManager.rightDownRight = false;
-        }
-
-        if(side == cubeStatus.left)
-        {
-            automate.DoMove("L");
-            dragging = false;
-            Debug.Log("12");
-            layerRotateButtonManager.rightDownRight = false;
-        }
-
-        if(side == cubeStatus.up)
-        {
-            automate.DoMove("U");
-            dragging = false;
-            Debug.Log("13");
-            layerRotateButtonManager.rightDownRight = false;
-        }
-
-        if(side == cubeStatus.down)
-        {
             automate.DoMove("D");
             dragging = false;
-            Debug.Log("14");
             layerRotateButtonManager.rightDownRight = false;
         }
 
-        if(side == cubeStatus.front)
-        {
-            automate.DoMove("F");
-            dragging = false;
-            Debug.Log("15");
-            layerRotateButtonManager.rightDownRight = false;
-        }
+        // if(side == cubeStatus.left)
+        // {
+        //     automate.DoMove("D");
+        //     dragging = false;
+        //     Debug.Log("12");
+        //     layerRotateButtonManager.rightDownRight = false;
+        // }
 
-        if(side == cubeStatus.back)
-        {
-            automate.DoMove("B");
-            dragging = false;
-            Debug.Log("16");
-            layerRotateButtonManager.rightDownRight = false;
-        }
+        // if(side == cubeStatus.up)
+        // {
+        //     automate.DoMove("F");
+        //     dragging = false;
+        //     Debug.Log("13");
+        //     layerRotateButtonManager.rightDownRight = false;
+        // }
+
+        // if(side == cubeStatus.down)
+        // {
+        //     automate.DoMove("B");
+        //     dragging = false;
+        //     Debug.Log("14");
+        //     layerRotateButtonManager.rightDownRight = false;
+        // }
+
+        // if(side == cubeStatus.front)
+        // {
+        //     automate.DoMove("D");
+        //     dragging = false;
+        //     Debug.Log("15");
+        //     layerRotateButtonManager.rightDownRight = false;
+        // }
+
+        // if(side == cubeStatus.back)
+        // {
+        //     automate.DoMove("D");
+        //     dragging = false;
+        //     Debug.Log("16");
+        //     layerRotateButtonManager.rightDownRight = false;
+        // }
 
         
     }
@@ -278,51 +267,50 @@ public class PiviotRotation : MonoBehaviour
     {
         if(side == cubeStatus.right)
         {
-            automate.DoMove("R'");
-            dragging = false;
-            Debug.Log("11");
-            layerRotateButtonManager.leftUp = false;
-        }
-
-        if(side == cubeStatus.left)
-        {
             automate.DoMove("L'");
             dragging = false;
-            Debug.Log("12");
             layerRotateButtonManager.leftUp = false;
         }
 
-        if(side == cubeStatus.up)
-        {
-            automate.DoMove("U'");
-            dragging = false;
-            Debug.Log("13");
-            layerRotateButtonManager.leftUp = false;
-        }
+        // if(side == cubeStatus.left)
+        // {
+        //     automate.DoMove("R'");
+        //     dragging = false;
+        //     Debug.Log("12");
+        //     layerRotateButtonManager.leftUp = false;
+        // }
 
-        if(side == cubeStatus.down)
-        {
-            automate.DoMove("D'");
-            dragging = false;
-            Debug.Log("14");
-            layerRotateButtonManager.leftUp = false;
-        }
+        // if(side == cubeStatus.up)
+        // {
+        //     automate.DoMove("L'");
+        //     dragging = false;
+        //     Debug.Log("13");
+        //     layerRotateButtonManager.leftUp = false;
+        // }
 
-        if(side == cubeStatus.front)
-        {
-            automate.DoMove("F'");
-            dragging = false;
-            Debug.Log("15");
-            layerRotateButtonManager.leftUp = false;
-        }
+        // if(side == cubeStatus.down)
+        // {
+        //     automate.DoMove("L'");
+        //     dragging = false;
+        //     Debug.Log("14");
+        //     layerRotateButtonManager.leftUp = false;
+        // }
 
-        if(side == cubeStatus.back)
-        {
-            automate.DoMove("B'");
-            dragging = false;
-            Debug.Log("16");
-            layerRotateButtonManager.leftUp = false;
-        }
+        // if(side == cubeStatus.front)
+        // {
+        //     automate.DoMove("F'");
+        //     dragging = false;
+        //     Debug.Log("15");
+        //     layerRotateButtonManager.leftUp = false;
+        // }
+
+        // if(side == cubeStatus.back)
+        // {
+        //     automate.DoMove("B'");
+        //     dragging = false;
+        //     Debug.Log("16");
+        //     layerRotateButtonManager.leftUp = false;
+        // }
 
 
         
@@ -334,51 +322,50 @@ public class PiviotRotation : MonoBehaviour
     {
         if(side == cubeStatus.right)
         {
-            automate.DoMove("R");
-            dragging = false;
-            Debug.Log("11");
-            layerRotateButtonManager.leftDown = false;
-        }
-
-        if(side == cubeStatus.left)
-        {
             automate.DoMove("L");
             dragging = false;
-            Debug.Log("12");
             layerRotateButtonManager.leftDown = false;
         }
 
-        if(side == cubeStatus.up)
-        {
-            automate.DoMove("U");
-            dragging = false;
-            Debug.Log("13");
-            layerRotateButtonManager.leftDown = false;
-        }
+        // if(side == cubeStatus.left)
+        // {
+        //     automate.DoMove("R");
+        //     dragging = false;
+        //     Debug.Log("12");
+        //     layerRotateButtonManager.leftDown = false;
+        // }
 
-        if(side == cubeStatus.down)
-        {
-            automate.DoMove("D");
-            dragging = false;
-            Debug.Log("14");
-            layerRotateButtonManager.leftDown = false;
-        }
+        // if(side == cubeStatus.up)
+        // {
+        //     automate.DoMove("L");
+        //     dragging = false;
+        //     Debug.Log("13");
+        //     layerRotateButtonManager.leftDown = false;
+        // }
 
-        if(side == cubeStatus.front)
-        {
-            automate.DoMove("F");
-            dragging = false;
-            Debug.Log("15");
-            layerRotateButtonManager.leftDown = false;
-        }
+        // if(side == cubeStatus.down)
+        // {
+        //     automate.DoMove("L");
+        //     dragging = false;
+        //     Debug.Log("14");
+        //     layerRotateButtonManager.leftDown = false;
+        // }
 
-        if(side == cubeStatus.back)
-        {
-            automate.DoMove("B");
-            dragging = false;
-            Debug.Log("16");
-            layerRotateButtonManager.leftDown = false;
-        }
+        // if(side == cubeStatus.front)
+        // {
+        //     automate.DoMove("F");
+        //     dragging = false;
+        //     Debug.Log("15");
+        //     layerRotateButtonManager.leftDown = false;
+        // }
+
+        // if(side == cubeStatus.back)
+        // {
+        //     automate.DoMove("B");
+        //     dragging = false;
+        //     Debug.Log("16");
+        //     layerRotateButtonManager.leftDown = false;
+        // }
 
         
     }
@@ -388,51 +375,50 @@ public class PiviotRotation : MonoBehaviour
     {
         if(side == cubeStatus.right)
         {
-            automate.DoMove("R");
-            dragging = false;
-            Debug.Log("11");
-            layerRotateButtonManager.leftUpLeft = false;
-        }
-
-        if(side == cubeStatus.left)
-        {
-            automate.DoMove("L");
-            dragging = false;
-            Debug.Log("12");
-            layerRotateButtonManager.leftUpLeft = false;
-        }
-
-        if(side == cubeStatus.up)
-        {
             automate.DoMove("U");
             dragging = false;
-            Debug.Log("13");
             layerRotateButtonManager.leftUpLeft = false;
         }
 
-        if(side == cubeStatus.down)
-        {
-            automate.DoMove("D");
-            dragging = false;
-            Debug.Log("14");
-            layerRotateButtonManager.leftUpLeft = false;
-        }
+        // if(side == cubeStatus.left)
+        // {
+        //     automate.DoMove("U");
+        //     dragging = false;
+        //     Debug.Log("12");
+        //     layerRotateButtonManager.leftUpLeft = false;
+        // }
 
-        if(side == cubeStatus.front)
-        {
-            automate.DoMove("F");
-            dragging = false;
-            Debug.Log("15");
-            layerRotateButtonManager.leftUpLeft = false;
-        }
+        // if(side == cubeStatus.up)
+        // {
+        //     automate.DoMove("B");
+        //     dragging = false;
+        //     Debug.Log("13");
+        //     layerRotateButtonManager.leftUpLeft = false;
+        // }
 
-        if(side == cubeStatus.back)
-        {
-            automate.DoMove("B");
-            dragging = false;
-            Debug.Log("16");
-            layerRotateButtonManager.leftUpLeft = false;
-        }
+        // if(side == cubeStatus.down)
+        // {
+        //     automate.DoMove("F");
+        //     dragging = false;
+        //     Debug.Log("14");
+        //     layerRotateButtonManager.leftUpLeft = false;
+        // }
+
+        // if(side == cubeStatus.front)
+        // {
+        //     automate.DoMove("U");
+        //     dragging = false;
+        //     Debug.Log("15");
+        //     layerRotateButtonManager.leftUpLeft = false;
+        // }
+
+        // if(side == cubeStatus.back)
+        // {
+        //     automate.DoMove("U");
+        //     dragging = false;
+        //     Debug.Log("16");
+        //     layerRotateButtonManager.leftUpLeft = false;
+        // }
 
         
     }
@@ -442,63 +428,332 @@ public class PiviotRotation : MonoBehaviour
     {
         if(side == cubeStatus.right)
         {
-            automate.DoMove("R'");
-            dragging = false;
-            Debug.Log("11");
-            layerRotateButtonManager.leftDownLeft = false;
-        }
-
-        if(side == cubeStatus.left)
-        {
-            automate.DoMove("L'");
-            dragging = false;
-            Debug.Log("12");
-            layerRotateButtonManager.leftDownLeft = false;
-        }
-
-        if(side == cubeStatus.up)
-        {
-            automate.DoMove("U'");
-            dragging = false;
-            Debug.Log("13");
-            layerRotateButtonManager.leftDownLeft = false;
-        }
-
-        if(side == cubeStatus.down)
-        {
             automate.DoMove("D'");
             dragging = false;
-            Debug.Log("14");
             layerRotateButtonManager.leftDownLeft = false;
         }
 
-        if(side == cubeStatus.front)
-        {
-            automate.DoMove("F'");
-            dragging = false;
-            Debug.Log("15");
-            layerRotateButtonManager.leftDownLeft = false;
-        }
+        // if(side == cubeStatus.left)
+        // {
+        //     automate.DoMove("D'");
+        //     dragging = false;
+        //     Debug.Log("12");
+        //     layerRotateButtonManager.leftDownLeft = false;
+        // }
 
-        if(side == cubeStatus.back)
-        {
-            automate.DoMove("B'");
-            dragging = false;
-            Debug.Log("16");
-            layerRotateButtonManager.leftDownLeft = false;
-        }
+        // if(side == cubeStatus.up)
+        // {
+        //     automate.DoMove("F'");
+        //     dragging = false;
+        //     Debug.Log("13");
+        //     layerRotateButtonManager.leftDownLeft = false;
+        // }
+
+        // if(side == cubeStatus.down)
+        // {
+        //     automate.DoMove("B'");
+        //     dragging = false;
+        //     Debug.Log("14");
+        //     layerRotateButtonManager.leftDownLeft = false;
+        // }
+
+        // if(side == cubeStatus.front)
+        // {
+        //     automate.DoMove("D'");
+        //     dragging = false;
+        //     Debug.Log("15");
+        //     layerRotateButtonManager.leftDownLeft = false;
+        // }
+
+        // if(side == cubeStatus.back)
+        // {
+        //     automate.DoMove("D'");
+        //     dragging = false;
+        //     Debug.Log("16");
+        //     layerRotateButtonManager.leftDownLeft = false;
+        // }
 
 
         
 
         
     }
+/////////////////////////////////////////////////////////////////////////////////////////////////
+    if (layerRotateButtonManager.midUp)
+    {
+        if(side == cubeStatus.right)
+        {
+            
+            cubeRotationManager.RotateUp();
+            automate.DoMove("R'");
+            automate.DoMove("L");
+            dragging = false;
+            layerRotateButtonManager.midUp = false;
+        }
 
+        // if(side == cubeStatus.left)
+        // {
+            
+        //     cubeRotationManager.RotateBottom();
+        //     automate.DoMove("R");
+        //     automate.DoMove("L'");
+        //     dragging = false;
+        //     Debug.Log("12");
+        //     layerRotateButtonManager.midUp = false;
+        // }
 
-    
+        // if(side == cubeStatus.up)
+        // {
+            
+        //     cubeRotationManager.RotateUp();
+        //     automate.DoMove("R'");
+        //     automate.DoMove("L");
+        //     dragging = false;
+        //     Debug.Log("13");
+        //     layerRotateButtonManager.midUp = false;
+        // }
 
+        // if(side == cubeStatus.down)
+        // {
+            
+        //     cubeRotationManager.RotateUp();
+        //     automate.DoMove("R'");
+        //     automate.DoMove("L");
+        //     dragging = false;
+        //     Debug.Log("14");
+        //     layerRotateButtonManager.midUp = false;
+        // }
 
-    
+        // if(side == cubeStatus.front)
+        // {
+           
+        //     cubeRotationManager.RotateLeft();
+        //     automate.DoMove("F");
+        //     automate.DoMove("B'");
+        //     dragging = false;
+        //     Debug.Log("15");
+        //     layerRotateButtonManager.midUp = false;
+        // }
+
+        // if(side == cubeStatus.back)
+        // {
+           
+        //     cubeRotationManager.RotateRight();
+        //     automate.DoMove("F'");
+        //     automate.DoMove("B");
+        //     dragging = false;
+        //     Debug.Log("16");
+        //     layerRotateButtonManager.midUp = false;
+        // }
+    }
+
+///////////////////////////////////////////////////////////////////////////////////
+if (layerRotateButtonManager.midDown)
+    {
+        if(side == cubeStatus.right)
+        {
+            
+            cubeRotationManager.RotateBottom();
+            automate.DoMove("R");
+            automate.DoMove("L'");
+            dragging = false;
+            layerRotateButtonManager.midDown = false;
+        }
+
+        // if(side == cubeStatus.left)
+        // {
+            
+        //     cubeRotationManager.RotateUp();
+        //     automate.DoMove("R'");
+        //     automate.DoMove("L");
+        //     dragging = false;
+        //     Debug.Log("11");
+        //     layerRotateButtonManager.midDown = false;
+        // }
+
+        // if(side == cubeStatus.up)
+        // {
+            
+        //     cubeRotationManager.RotateBottom();
+        //     automate.DoMove("R");
+        //     automate.DoMove("L'");
+        //     dragging = false;
+        //     Debug.Log("11");
+        //     layerRotateButtonManager.midDown = false;
+        // }
+
+        // if(side == cubeStatus.down)
+        // {
+            
+        //     cubeRotationManager.RotateBottom();
+        //     automate.DoMove("R");
+        //     automate.DoMove("L'");
+        //     dragging = false;
+        //     Debug.Log("11");
+        //     layerRotateButtonManager.midDown = false;
+        // }
+
+        // if(side == cubeStatus.front)
+        // {
+           
+        //     cubeRotationManager.RotateRight();
+        //     automate.DoMove("F'");
+        //     automate.DoMove("B");
+        //     dragging = false;
+        //     Debug.Log("11");
+        //     layerRotateButtonManager.midDown = false;
+        // }
+
+        // if(side == cubeStatus.back)
+        // {
+           
+        //     cubeRotationManager.RotateLeft();
+        //     automate.DoMove("F");
+        //     automate.DoMove("B'");
+        //     dragging = false;
+        //     Debug.Log("11");
+        //     layerRotateButtonManager.midDown = false;
+        // }
+    }    
+
+//////////////////////////////////////////////////////////////////////
+if (layerRotateButtonManager.midRight)
+    {
+        if(side == cubeStatus.right)
+        {
+            
+            cubeRotationManager.RotateRight();
+            automate.DoMove("U");
+            automate.DoMove("D'");
+            dragging = false;
+            layerRotateButtonManager.midRight = false;
+        }
+
+        // if(side == cubeStatus.left)
+        // {
+            
+        //     cubeRotationManager.RotateRight();
+        //     automate.DoMove("U");
+        //     automate.DoMove("D'");
+        //     dragging = false;
+        //     Debug.Log("11");
+        //     layerRotateButtonManager.midRight = false;
+        // }
+
+        // if(side == cubeStatus.up)
+        // {
+            
+        //     cubeRotationManager.RotateRight();
+        //     automate.DoMove("U");
+        //     automate.DoMove("D'");
+        //     dragging = false;
+        //     Debug.Log("11");
+        //     layerRotateButtonManager.midRight = false;
+        // }
+
+        // if(side == cubeStatus.down)
+        // {
+            
+        //     cubeRotationManager.RotateRight();
+        //     automate.DoMove("U");
+        //     automate.DoMove("D'");
+        //     dragging = false;
+        //     Debug.Log("11");
+        //     layerRotateButtonManager.midRight = false;
+        // }
+
+        // if(side == cubeStatus.front)
+        // {
+           
+        //     cubeRotationManager.RotateRight();
+        //     automate.DoMove("U");
+        //     automate.DoMove("D'");
+        //     dragging = false;
+        //     Debug.Log("11");
+        //     layerRotateButtonManager.midRight = false;
+        // }
+
+        // if(side == cubeStatus.back)
+        // {
+           
+        //     cubeRotationManager.RotateRight();
+        //     automate.DoMove("U");
+        //     automate.DoMove("D'");
+        //     dragging = false;
+        //     Debug.Log("11");
+        //     layerRotateButtonManager.midRight = false;
+        // }
+    }    
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    if (layerRotateButtonManager.midLeft)
+    {
+        if(side == cubeStatus.right)
+        {
+            
+            cubeRotationManager.RotateLeft();
+            automate.DoMove("U'");
+            automate.DoMove("D");
+            dragging = false;
+            layerRotateButtonManager.midLeft = false;
+        }
+
+        // if(side == cubeStatus.left)
+        // {
+            
+        //     cubeRotationManager.RotateLeft();
+        //     automate.DoMove("U'");
+        //     automate.DoMove("D");
+        //     dragging = false;
+        //     Debug.Log("11");
+        //     layerRotateButtonManager.midLeft = false;
+        // }
+
+        // if(side == cubeStatus.up)
+        // {
+            
+        //     cubeRotationManager.RotateLeft();
+        //     automate.DoMove("U'");
+        //     automate.DoMove("D");
+        //     dragging = false;
+        //     Debug.Log("11");
+        //     layerRotateButtonManager.midLeft = false;
+        // }
+
+        // if(side == cubeStatus.down)
+        // {
+            
+        //     cubeRotationManager.RotateLeft();
+        //     automate.DoMove("U'");
+        //     automate.DoMove("D");
+        //     dragging = false;
+        //     Debug.Log("11");
+        //     layerRotateButtonManager.midLeft = false;
+        // }
+
+        // if(side == cubeStatus.front)
+        // {
+           
+        //     cubeRotationManager.RotateLeft();
+        //     automate.DoMove("U'");
+        //     automate.DoMove("D");
+        //     dragging = false;
+        //     Debug.Log("11");
+        //     layerRotateButtonManager.midLeft = false;
+        // }
+
+        // if(side == cubeStatus.back)
+        // {
+           
+        //     cubeRotationManager.RotateLeft();
+        //     automate.DoMove("U'");
+        //     automate.DoMove("D");
+        //     dragging = false;
+        //     Debug.Log("11");
+        //     layerRotateButtonManager.midLeft = false;
+        // }
+    }    
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
     }
 
