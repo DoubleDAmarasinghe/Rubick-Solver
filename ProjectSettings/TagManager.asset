@@ -8,6 +8,7 @@ TagManager:
   - Toggle1
   - Toggle2
   - Toggle3
+  - ARPlane
   layers:
   - Default
   - TransparentFX

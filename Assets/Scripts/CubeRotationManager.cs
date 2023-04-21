@@ -76,4 +76,16 @@ public class CubeRotationManager : MonoBehaviour
         cube.transform.Rotate(0, 0, 90, Space.World);
         wholeCubeRotating = true;
     }
+
+    public void RotateRollLeft()
+    {
+        cube.transform.Rotate(90, 0, 0, Space.World);
+        wholeCubeRotating = true;
+    }
+
+    public void RotateRollRight()
+    {
+        cube.transform.Rotate(-90, 0, 0, Space.World);
+        wholeCubeRotating = true;
+    }
 }

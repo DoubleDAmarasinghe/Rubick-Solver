@@ -15,6 +15,7 @@ public class AR_Raycast_Script : MonoBehaviour
     public GameObject topTextPanel;
     public GameObject bottomButtonPanel;
     public GameObject countDownTimer;
+    public GameObject ARPlaneMesh;
     // private Button tapButton;
     // public GameObject cubeToSpawn;
     // public GameObject testt;
@@ -56,6 +57,9 @@ public class AR_Raycast_Script : MonoBehaviour
     private GetSliderValue getSliderValue;
     private SoundManager soundManager;
     private PlaceIndicator placeIndicator;
+
+    public GameObject ARSessionOrigin;
+    private ARPlaneManager aRPlaneManager;
     
     float changedHeight;
     // Start is called before the first frame update
@@ -80,6 +84,11 @@ public class AR_Raycast_Script : MonoBehaviour
         mainTittleDown = mainTittle.GetComponent<Animator>();
         tapToPlaceAnim = tapToPlace.GetComponent<Animator>();
         placeIndicator = GameObject.FindObjectOfType<PlaceIndicator>();
+
+        aRPlaneManager = ARSessionOrigin.GetComponent<ARPlaneManager>();
+        
+
+
     }
 
     // Update is called once per frame
@@ -156,6 +165,8 @@ public class AR_Raycast_Script : MonoBehaviour
             canSetHeight = false;
             //heightSlider.SetActive(false);
             SliderUp.SetTrigger("SliderDown");
+            
+            aRPlaneManager.enabled = false;
             
         }
 
