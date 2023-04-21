@@ -58,7 +58,7 @@ public class AR_Raycast_Script : MonoBehaviour
     private SoundManager soundManager;
     private PlaceIndicator placeIndicator;
 
-    public GameObject ARSessionOrigin;
+    
     private ARPlaneManager aRPlaneManager;
     
     float changedHeight;
@@ -87,7 +87,7 @@ public class AR_Raycast_Script : MonoBehaviour
 
         //aRPlaneManager = ARSessionOrigin.GetComponent<ARPlaneManager>();
         aRPlaneManager = GameObject.FindObjectOfType<ARPlaneManager>();
-        aRPlaneManager.planePrefab = null;
+        //aRPlaneManager.planePrefab = null;
         
 
 
