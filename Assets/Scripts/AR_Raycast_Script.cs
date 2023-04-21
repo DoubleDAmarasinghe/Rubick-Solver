@@ -85,7 +85,9 @@ public class AR_Raycast_Script : MonoBehaviour
         tapToPlaceAnim = tapToPlace.GetComponent<Animator>();
         placeIndicator = GameObject.FindObjectOfType<PlaceIndicator>();
 
-        aRPlaneManager = ARSessionOrigin.GetComponent<ARPlaneManager>();
+        //aRPlaneManager = ARSessionOrigin.GetComponent<ARPlaneManager>();
+        aRPlaneManager = GameObject.FindObjectOfType<ARPlaneManager>();
+        aRPlaneManager.planePrefab = null;
         
 
 
@@ -156,6 +158,8 @@ public class AR_Raycast_Script : MonoBehaviour
 
         if(canStart)
         {
+            //aRPlaneManager.enabled = false;
+            
             StartCoroutine(automate.firstShuffle());
             cubeRotationManager.HideArrows(5.5f);
             topTextPanelAnim.SetTrigger("TopTextPanelUp");
@@ -166,7 +170,7 @@ public class AR_Raycast_Script : MonoBehaviour
             //heightSlider.SetActive(false);
             SliderUp.SetTrigger("SliderDown");
             
-            aRPlaneManager.enabled = false;
+            
             
         }
 
