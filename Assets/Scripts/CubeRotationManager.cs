@@ -45,11 +45,27 @@ public class CubeRotationManager : MonoBehaviour
         StartCoroutine(ShowArrows(showTimeDelay));
     }
 
+    //delay for whole cube rotators
     IEnumerator ShowArrows(float showTimeDelay)
     {
         yield return new WaitForSeconds(showTimeDelay);
         controllerArrowPanel.SetActive(true);
         wholeRotateArrowPanel.SetActive(true);
+        stopWatchTimer.StartCounter();
+    }
+
+    
+    public void HideLayerRotateArrows(GameObject layerRotateArrowSet)
+    {
+        layerRotateArrowSet.SetActive(false);
+        StartCoroutine(ShowLayerRotateArrows(layerRotateArrowSet));
+    }
+    
+    //delay for cube layer rotators
+    IEnumerator ShowLayerRotateArrows(GameObject layerRotateArrowSet)
+    {
+        yield return new WaitForSeconds(0.5f);
+        layerRotateArrowSet.SetActive(true);
         stopWatchTimer.StartCounter();
     }
 

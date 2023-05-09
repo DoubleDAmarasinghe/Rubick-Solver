@@ -524,6 +524,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 526115569}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &39579129
 BoxCollider:
@@ -1556,6 +1568,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1221898475}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2915,6 +2939,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1537900600}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &205994417
 BoxCollider:
@@ -4131,6 +4167,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1537900600}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &281052200
 BoxCollider:
@@ -4431,6 +4479,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1221898475}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5569,6 +5629,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 493106074}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &380081027
 BoxCollider:
@@ -6239,6 +6311,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 526115569}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7258,7 +7342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &493106075
 Transform:
   m_ObjectHideFlags: 0
@@ -8309,6 +8393,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 930435252}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -12478,6 +12574,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1537900600}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &637490653
 BoxCollider:
@@ -13022,6 +13130,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 526115569}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &690910906
 BoxCollider:
@@ -13528,6 +13648,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 493106074}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &715060798
 BoxCollider:
@@ -13673,6 +13805,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 526115569}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -14944,6 +15088,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1537900600}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &767414012
 BoxCollider:
@@ -15088,7 +15244,6 @@ MonoBehaviour:
   raycastManager: {fileID: 388525033}
   objectToPlace: {fileID: 487864249}
   arcamera: {fileID: 22732920}
-  ARSessionOrigin: {fileID: 388525029}
 --- !u!1 &790185405
 GameObject:
   m_ObjectHideFlags: 0
@@ -15725,6 +15880,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 526115569}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -19624,6 +19791,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1537900600}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!23 &1114091166
 MeshRenderer:
@@ -20204,6 +20383,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 930435252}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &1161729353
 BoxCollider:
@@ -20349,6 +20540,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1221898475}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -21129,6 +21332,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 930435252}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -24134,6 +24349,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 526115569}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &1242817661
 BoxCollider:
@@ -25107,6 +25334,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1221898475}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &1300025818
 BoxCollider:
@@ -25334,6 +25573,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 930435252}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -26038,6 +26289,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1221898475}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -26776,6 +27039,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1537900600}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &1389476170
 BoxCollider:
@@ -26940,6 +27215,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 493106074}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -27178,6 +27465,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 493106074}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -27876,6 +28175,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 493106074}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &1442951556
 BoxCollider:
@@ -28034,6 +28345,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1537900600}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -29707,6 +30030,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1221898475}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &1530575251
 BoxCollider:
@@ -30078,6 +30413,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 526115569}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -30544,6 +30891,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 930435252}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!23 &1616968939
 MeshRenderer:
@@ -30676,6 +31035,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 930435252}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -31749,6 +32120,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 493106074}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!23 &1678838141
 MeshRenderer:
@@ -32477,6 +32860,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1537900600}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -34465,6 +34860,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1221898475}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!23 &1817580776
 MeshRenderer:
@@ -35021,6 +35428,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1221898475}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -41083,6 +41502,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 526115569}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &1885985629
 BoxCollider:
@@ -41355,6 +41786,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 493106074}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -43411,6 +43854,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 493106074}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &2056329967
 BoxCollider:
@@ -43939,6 +44394,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 930435252}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &2096920519
 BoxCollider:
@@ -44309,6 +44776,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 930435252}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -45444,6 +45923,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 159542190}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &3469287836707608571
 BoxCollider:
@@ -45525,6 +46016,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 159542190}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!33 &3469287836843629823
 MeshFilter:
@@ -45580,6 +46083,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 159542190}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -45658,6 +46173,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 159542190}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &3469287836946140290
 BoxCollider:
@@ -45726,6 +46253,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 159542190}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -45804,6 +46343,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 159542190}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 0}
 --- !u!65 &3469287837503436545
 BoxCollider:
@@ -45872,6 +46423,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 159542190}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -45961,6 +46524,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 575701760}
+        m_TargetAssemblyTypeName: CubeRotationManager, Assembly-CSharp
+        m_MethodName: HideLayerRotateArrows
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 159542190}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
