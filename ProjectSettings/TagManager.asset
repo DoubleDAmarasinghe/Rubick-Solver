@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Cube
+  - Toggle1
+  - Toggle2
+  - Toggle3
+  - ARPlane
   layers:
   - Default
   - TransparentFX
@@ -11,13 +16,13 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Faces
+  - RedSide
+  - BlueSide
+  - GreenSide
+  - YellowSide
+  - WhiteSide
+  - OrangeSide
   - 
   - 
   - 
