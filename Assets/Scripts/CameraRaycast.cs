@@ -30,136 +30,145 @@ public class CameraRaycast : MonoBehaviour
     public bool yellowSide = false;
     public bool whiteSide = false;
     public bool orangeSide = false;
+
+    public bool canRayCast;
     // Start is called before the first frame update
     void Start()
     {
-    
+        canRayCast = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 startPosition = arCamera.transform.position;
-        RaycastHit hit;
-        //startPosition.z = 100f;
-        //startPosition = arCamera.ScreenToWorldPoint(startPosition);
-        Ray rayFromFront = new Ray(arCamera.transform.position, arCamera.transform.forward);
+        if (canRayCast)
+        {
+            Vector3 startPosition = arCamera.transform.position;
+            RaycastHit hit;
+            //startPosition.z = 100f;
+            //startPosition = arCamera.ScreenToWorldPoint(startPosition);
+            Ray rayFromFront = new Ray(arCamera.transform.position, arCamera.transform.forward);
+
+            if (Physics.Raycast(rayFromFront, out hit, 0.05f, layerMask_red) && !redSide)
+            {
+                controllerArrowsRedSide.SetActive(true);
+                controllerArrowsBlueSide.SetActive(false);
+                controllerArrowsGreenSide.SetActive(false);
+                controllerArrowsOrangeSide.SetActive(false);
+                controllerArrowsWhiteSide.SetActive(false);
+                controllerArrowsYellowSide.SetActive(false);
+                // controllerArrows.transform.rotation = redSideMesh.transform.rotation;
+                Debug.Log("RedSide");
+                redSide = true;
+                orangeSide = false;
+                whiteSide = false;
+                greenSide = false;
+                blueSide = false;
+                yellowSide = false;
+            }
+
+            if (Physics.Raycast(rayFromFront, out hit, 0.05f, layerMask_blue) && !blueSide)
+            {
+                controllerArrowsBlueSide.SetActive(true);
+                controllerArrowsRedSide.SetActive(false);
+                controllerArrowsGreenSide.SetActive(false);
+                controllerArrowsOrangeSide.SetActive(false);
+                controllerArrowsWhiteSide.SetActive(false);
+                controllerArrowsYellowSide.SetActive(false);
+                // controllerArrows.transform.rotation = blueSideMesh.transform.rotation;
+                Debug.Log("BlueSide");
+                blueSide = true;
+                redSide = false;
+                whiteSide = false;
+                greenSide = false;
+                orangeSide = false;
+                yellowSide = false;
+            }
+
+            if (Physics.Raycast(rayFromFront, out hit, 0.05f, layerMask_green) && !greenSide)
+            {
+                controllerArrowsGreenSide.SetActive(true);
+                controllerArrowsRedSide.SetActive(false);
+                controllerArrowsBlueSide.SetActive(false);
+                controllerArrowsOrangeSide.SetActive(false);
+                controllerArrowsWhiteSide.SetActive(false);
+                controllerArrowsYellowSide.SetActive(false);
+                // controllerArrows.transform.rotation = greenSideMesh.transform.rotation;
+                Debug.Log("GreenSide");
+                greenSide = true;
+                redSide = false;
+                whiteSide = false;
+                orangeSide = false;
+                blueSide = false;
+                yellowSide = false;
+            }
+
+            if (Physics.Raycast(rayFromFront, out hit, 0.05f, layerMask_yellow) && !yellowSide)
+            {
+                controllerArrowsYellowSide.SetActive(true);
+                controllerArrowsRedSide.SetActive(false);
+                controllerArrowsBlueSide.SetActive(false);
+                controllerArrowsOrangeSide.SetActive(false);
+                controllerArrowsWhiteSide.SetActive(false);
+                controllerArrowsGreenSide.SetActive(false);
+                // controllerArrows.transform.rotation = yellowSideMesh.transform.rotation;
+                Debug.Log("YellowSide");
+                yellowSide = true;
+                redSide = false;
+                whiteSide = false;
+                greenSide = false;
+                blueSide = false;
+                orangeSide = false;
+            }
+
+            if (Physics.Raycast(rayFromFront, out hit, 0.05f, layerMask_white) && !whiteSide)
+            {
+                controllerArrowsWhiteSide.SetActive(true);
+                controllerArrowsRedSide.SetActive(false);
+                controllerArrowsBlueSide.SetActive(false);
+                controllerArrowsOrangeSide.SetActive(false);
+                controllerArrowsYellowSide.SetActive(false);
+                controllerArrowsGreenSide.SetActive(false);
+                // controllerArrows.transform.rotation = whiteSideMesh.transform.rotation;
+                Debug.Log("WhiteSide");
+                whiteSide = true;
+                redSide = false;
+                greenSide = false;
+                blueSide = false;
+                yellowSide = false;
+                orangeSide = false;
+            }
+
+            if (Physics.Raycast(rayFromFront, out hit, 0.05f, layerMask_orange) && !orangeSide)
+            {
+                controllerArrowsOrangeSide.SetActive(true);
+                controllerArrowsRedSide.SetActive(false);
+                controllerArrowsBlueSide.SetActive(false);
+                controllerArrowsWhiteSide.SetActive(false);
+                controllerArrowsYellowSide.SetActive(false);
+                controllerArrowsGreenSide.SetActive(false);
+                // controllerArrows.transform.rotation = orangeSideMesh.transform.rotation;
+                Debug.Log("OrangeSide");
+                orangeSide = true;
+                redSide = false;
+                whiteSide = false;
+                greenSide = false;
+                blueSide = false;
+                yellowSide = false;
+            }
+
+            Debug.DrawRay(arCamera.transform.position, arCamera.transform.forward, Color.green);
+        }
+
         
         
         
         
-        if(Physics.Raycast(rayFromFront, out hit, 0.05f, layerMask_red) && !redSide)
-        {
-            controllerArrowsRedSide.SetActive(true);
-            controllerArrowsBlueSide.SetActive(false);
-            controllerArrowsGreenSide.SetActive(false);
-            controllerArrowsOrangeSide.SetActive(false);
-            controllerArrowsWhiteSide.SetActive(false);
-            controllerArrowsYellowSide.SetActive(false);
-            // controllerArrows.transform.rotation = redSideMesh.transform.rotation;
-            Debug.Log("RedSide");
-            redSide = true;
-            orangeSide = false;
-            whiteSide = false;
-            greenSide = false;
-            blueSide = false;
-            yellowSide = false;
-        }
-
-        if(Physics.Raycast(rayFromFront, out hit, 0.05f, layerMask_blue) && !blueSide)
-        {
-            controllerArrowsBlueSide.SetActive(true);
-            controllerArrowsRedSide.SetActive(false);
-            controllerArrowsGreenSide.SetActive(false);
-            controllerArrowsOrangeSide.SetActive(false);
-            controllerArrowsWhiteSide.SetActive(false);
-            controllerArrowsYellowSide.SetActive(false);
-            // controllerArrows.transform.rotation = blueSideMesh.transform.rotation;
-            Debug.Log("BlueSide");
-            blueSide = true;
-            redSide = false;
-            whiteSide = false;
-            greenSide = false;
-            orangeSide = false;
-            yellowSide = false;
-        }
-
-        if(Physics.Raycast(rayFromFront, out hit, 0.05f, layerMask_green) && !greenSide)
-        {
-            controllerArrowsGreenSide.SetActive(true);
-            controllerArrowsRedSide.SetActive(false);
-            controllerArrowsBlueSide.SetActive(false);
-            controllerArrowsOrangeSide.SetActive(false);
-            controllerArrowsWhiteSide.SetActive(false);
-            controllerArrowsYellowSide.SetActive(false);
-            // controllerArrows.transform.rotation = greenSideMesh.transform.rotation;
-            Debug.Log("GreenSide");
-            greenSide = true;
-            redSide = false;
-            whiteSide = false;
-            orangeSide = false;
-            blueSide = false;
-            yellowSide = false;
-        }
-
-        if(Physics.Raycast(rayFromFront, out hit, 0.05f, layerMask_yellow) && !yellowSide)
-        {
-            controllerArrowsYellowSide.SetActive(true);
-            controllerArrowsRedSide.SetActive(false);
-            controllerArrowsBlueSide.SetActive(false);
-            controllerArrowsOrangeSide.SetActive(false);
-            controllerArrowsWhiteSide.SetActive(false);
-            controllerArrowsGreenSide.SetActive(false);
-            // controllerArrows.transform.rotation = yellowSideMesh.transform.rotation;
-            Debug.Log("YellowSide");
-            yellowSide = true;
-            redSide = false;
-            whiteSide = false;
-            greenSide = false;
-            blueSide = false;
-            orangeSide = false;
-        }
-
-        if(Physics.Raycast(rayFromFront, out hit, 0.05f, layerMask_white) && !whiteSide)
-        {
-            controllerArrowsWhiteSide.SetActive(true);
-            controllerArrowsRedSide.SetActive(false);
-            controllerArrowsBlueSide.SetActive(false);
-            controllerArrowsOrangeSide.SetActive(false);
-            controllerArrowsYellowSide.SetActive(false);
-            controllerArrowsGreenSide.SetActive(false);
-            // controllerArrows.transform.rotation = whiteSideMesh.transform.rotation;
-            Debug.Log("WhiteSide");
-            whiteSide = true;
-            redSide = false;
-            greenSide = false;
-            blueSide = false;
-            yellowSide = false;
-            orangeSide = false;
-        }
-
-        if(Physics.Raycast(rayFromFront, out hit, 0.05f, layerMask_orange) && !orangeSide)
-        {
-            controllerArrowsOrangeSide.SetActive(true);
-            controllerArrowsRedSide.SetActive(false);
-            controllerArrowsBlueSide.SetActive(false);
-            controllerArrowsWhiteSide.SetActive(false);
-            controllerArrowsYellowSide.SetActive(false);
-            controllerArrowsGreenSide.SetActive(false);
-            // controllerArrows.transform.rotation = orangeSideMesh.transform.rotation;
-            Debug.Log("OrangeSide");
-            orangeSide = true;
-            redSide = false;
-            whiteSide = false;
-            greenSide = false;
-            blueSide = false;
-            yellowSide = false;
-        }
-
-        Debug.DrawRay(arCamera.transform.position, arCamera.transform.forward,Color.green);
+        
+        
     }
 
-    private void DeactivateAllArrows()
+    public void DeactivateAllArrows()
     {
         controllerArrowsRedSide.SetActive(false);
         controllerArrowsBlueSide.SetActive(false);

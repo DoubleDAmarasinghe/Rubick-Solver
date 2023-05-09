@@ -18,6 +18,12 @@ public class CubeRotationManager : MonoBehaviour
     Automate automate;
     SolveTwoPhase solveTwoPhase;
     StopWatchTimer stopWatchTimer;
+
+    CameraRaycast cameraRaycast;
+
+    [SerializeField]
+    private GameObject[] AllLayerRotateButtons;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +31,7 @@ public class CubeRotationManager : MonoBehaviour
         automate = GameObject.FindObjectOfType<Automate>();
         solveTwoPhase = GameObject.FindObjectOfType<SolveTwoPhase>();
         stopWatchTimer = GameObject.FindObjectOfType<StopWatchTimer>();
+        cameraRaycast = GameObject.FindObjectOfType<CameraRaycast>();
     }
 
     // Update is called once per frame
@@ -68,6 +75,28 @@ public class CubeRotationManager : MonoBehaviour
         layerRotateArrowSet.SetActive(true);
         stopWatchTimer.StartCounter();
     }
+
+    public void DisableLayerRotateWhenAutomation(float timeDelay)
+    {
+        foreach(GameObject button in AllLayerRotateButtons)
+        {
+            button.SetActive(false);
+        }
+        cameraRaycast.DeactivateAllArrows();
+        StartCoroutine(EnableLayerRotationAfterAutomation(timeDelay));
+    }
+
+    IEnumerator EnableLayerRotationAfterAutomation(float timeDelay)
+    {
+        yield return new WaitForSeconds(timeDelay);
+        foreach (GameObject button in AllLayerRotateButtons)
+        {
+            button.SetActive(true);
+        }
+    }
+
+
+    
 
     public void RotateLeft()
     {
