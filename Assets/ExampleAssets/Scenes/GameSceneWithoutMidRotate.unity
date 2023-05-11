@@ -4381,6 +4381,7 @@ GameObject:
   - component: {fileID: 388525033}
   - component: {fileID: 388525035}
   - component: {fileID: 388525036}
+  - component: {fileID: 388525037}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -4503,6 +4504,18 @@ MonoBehaviour:
   whiteSide: 0
   orangeSide: 0
   canRayCast: 0
+--- !u!114 &388525037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388525029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a16563d392f55b943958d88f0059d401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &405959543 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7280111239090511395, guid: b67f34590ddd4244594522ad9c2b0009,
@@ -7337,6 +7350,8 @@ MonoBehaviour:
   speed: 200
   controllerArrowPanel: {fileID: 1380416273}
   wholeRotateArrowPanel: {fileID: 1942651039}
+  sloveButton: {fileID: 2073504549}
+  shuffleButton: {fileID: 913410183}
   AllLayerRotateButtons:
   - {fileID: 1997213669}
   - {fileID: 1452592424}
@@ -11062,7 +11077,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &683774131
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12554,7 +12569,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 278, y: -351}
+  m_AnchoredPosition: {x: 278, y: -101}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &756721942
@@ -13714,7 +13729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -144.00005, y: -345}
+  m_AnchoredPosition: {x: -144.00005, y: -95}
   m_SizeDelta: {x: 500, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &850906548
@@ -14306,7 +14321,7 @@ GameObject:
   - component: {fileID: 913410184}
   - component: {fileID: 913410183}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Shuffle_Button (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22974,7 +22989,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 278, y: 79}
+  m_AnchoredPosition: {x: 278, y: 173}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1321191503
@@ -28215,7 +28230,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -144.00005, y: 85}
+  m_AnchoredPosition: {x: -144.00005, y: 179}
   m_SizeDelta: {x: 500, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1684152376
@@ -29063,7 +29078,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1719972137
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38655,7 +38670,7 @@ GameObject:
   - component: {fileID: 2073504550}
   - component: {fileID: 2073504549}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Slove_Button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

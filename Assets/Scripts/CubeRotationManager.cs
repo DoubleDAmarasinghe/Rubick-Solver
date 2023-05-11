@@ -18,6 +18,8 @@ public class CubeRotationManager : MonoBehaviour
     Automate automate;
     SolveTwoPhase solveTwoPhase;
     StopWatchTimer stopWatchTimer;
+    public Button sloveButton, shuffleButton;
+
 
     CameraRaycast cameraRaycast;
 
@@ -37,17 +39,19 @@ public class CubeRotationManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.rotation != cube.transform.rotation)
+        if (transform.rotation != cube.transform.rotation)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, cube.transform.rotation, speed * Time.deltaTime);
             readCube.ReadState();
-        } 
+        }
     }
 
     public void HideArrows(float showTimeDelay)
     {
         controllerArrowPanel.SetActive(false);
         wholeRotateArrowPanel.SetActive(false);
+        shuffleButton.interactable = false;
+        sloveButton.interactable = false;
 
         StartCoroutine(ShowArrows(showTimeDelay));
     }
@@ -58,16 +62,18 @@ public class CubeRotationManager : MonoBehaviour
         yield return new WaitForSeconds(showTimeDelay);
         controllerArrowPanel.SetActive(true);
         wholeRotateArrowPanel.SetActive(true);
+        shuffleButton.interactable = true;
+        sloveButton.interactable = true;
         stopWatchTimer.StartCounter();
     }
 
-    
+
     public void HideLayerRotateArrows(GameObject layerRotateArrowSet)
     {
         layerRotateArrowSet.SetActive(false);
         StartCoroutine(ShowLayerRotateArrows(layerRotateArrowSet));
     }
-    
+
     //delay for cube layer rotators
     IEnumerator ShowLayerRotateArrows(GameObject layerRotateArrowSet)
     {
@@ -78,7 +84,7 @@ public class CubeRotationManager : MonoBehaviour
 
     public void DisableLayerRotateWhenAutomation(float timeDelay)
     {
-        foreach(GameObject button in AllLayerRotateButtons)
+        foreach (GameObject button in AllLayerRotateButtons)
         {
             button.SetActive(false);
         }
@@ -96,12 +102,12 @@ public class CubeRotationManager : MonoBehaviour
     }
 
 
-    
+
 
     public void RotateLeft()
     {
         cube.transform.Rotate(0, 90, 0, Space.World);
-        wholeCubeRotating = true; 
+        wholeCubeRotating = true;
     }
 
     public void RotateRight()
